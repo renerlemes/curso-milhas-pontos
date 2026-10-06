@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Custo por Milheiro — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-lesson="m7-a1" data-root="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="../../index.html"><div class="brand-mark">M&amp;P</div><div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div></a><div class="top-note">Do zero à primeira passagem</div></div></header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas"><div class="course-nav-label"><a href="../../index.html">Aulas</a></div><nav id="curriculum" aria-label="Módulos do curso"></nav><footer class="course-progress"><div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div><div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div><div class="progress-pct" id="progress-pct">0% concluído</div></footer></aside>
+    <main id="conteudo"><article class="lesson">
+      <header class="hero"><div class="eyebrow">Módulo 7 · Cálculos</div><h1>Custo por Milheiro</h1><p class="lead">Descubra quanto você pagou por cada 1.000 pontos.</p><div class="meta"><span class="pill">Módulo 7 - Aula 1</span></div></header>
+      <div class="body">
+        <section class="section">
+          <div class="kicker">01 · Calculadora</div><h2>Edite os valores</h2>
+          <div class="calculator" data-calculator="purchase">
+            <div class="calculator-fields">
+              <div class="calculator-field"><label for="points">Pontos comprados</label><input class="calculator-input" id="points" name="points" type="text" inputmode="numeric" data-mask="integer"></div>
+              <div class="calculator-field"><label for="paid">Valor pago (R$)</label><input class="calculator-input" id="paid" name="paid" type="text" inputmode="decimal" data-mask="money"></div>
+            </div>
+            <div class="calculator-results" aria-live="polite"><div class="calculator-result"><span>Custo por milheiro</span><output data-output="cpm">—</output></div></div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="kicker">02 · Fórmula</div><h2>Valor pago dividido pelos pontos</h2>
+          <div class="formula"><div class="formula-label">Custo por milheiro</div><div class="equation">(valor pago ÷ pontos comprados) × 1.000</div></div>
+        </section>
+      </div>
+      <div class="lesson-actions"><button type="button" class="btn" id="btn-toggle-complete">Marcar como concluída</button></div><footer class="footer"><nav class="actions" id="lesson-pager" aria-label="Navegação entre aulas"></nav></footer>
+    </article></main>
+  </div>
+  <script src="../../script.js"></script><script src="../../script-calculadoras.js"></script>
+</body>
+</html>

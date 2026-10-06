@@ -1,0 +1,37 @@
+name: Deploy - Railway
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: railway-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Git - Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js - Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Railway - Install CLI
+        run: npm install --global @railway/cli
+
+      - name: Railway - Deploy
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_SERVICE_ID: milhas-pontos-app
+        run: >
+          railway up --ci --service "$RAILWAY_SERVICE_ID"
+          -m "GitHub Actions: $GITHUB_SHA"

@@ -1,0 +1,10 @@
+{
+	"cleanUrls": false,
+	"rewrites": [
+		{ "source": "/", "destination": "/index.html" },
+		{ "source": "/curso", "destination": "/src/curso/index.html" },
+		{ "source": "/curso/", "destination": "/src/curso/index.html" },
+		{ "source": "/slides", "destination": "/src/slides/index.html" },
+		{ "source": "/slides/", "destination": "/src/slides/index.html" }
+	]
+}

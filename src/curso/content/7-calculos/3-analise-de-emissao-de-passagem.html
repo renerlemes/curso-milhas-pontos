@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
+  <title>Análise de Emissão de Passagem — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-lesson="m7-a3" data-root="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar"><div class="topbar-inner"><a class="brand" href="../../index.html"><div class="brand-mark">M&amp;P</div><div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div></a><div class="top-note">Do zero à primeira passagem</div></div></header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas"><div class="course-nav-label"><a href="../../index.html">Aulas</a></div><nav id="curriculum" aria-label="Módulos do curso"></nav><footer class="course-progress"><div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div><div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div><div class="progress-pct" id="progress-pct">0% concluído</div></footer></aside>
+    <main id="conteudo"><article class="lesson">
+      <header class="hero"><div class="eyebrow">Módulo 7 · Cálculos</div><h1>Análise de Emissão de Passagem</h1><p class="lead">Compare o custo real das milhas com a mesma passagem em dinheiro.</p><div class="meta"><span class="pill">Módulo 7 - Aula 3</span></div></header>
+      <div class="body">
+        <section class="section"><div class="kicker">01 · Calculadora</div><h2>Edite os valores</h2>
+          <div class="calculator" data-calculator="emission">
+            <div class="calculator-fields">
+              <div class="calculator-field"><label for="miles">Milhas da passagem</label><input class="calculator-input" id="miles" name="miles" type="text" inputmode="numeric" data-mask="integer"></div>
+              <div class="calculator-field"><label for="cash-fare">Passagem em dinheiro (R$)</label><input class="calculator-input" id="cash-fare" name="cash-fare" type="text" inputmode="decimal" data-mask="money"></div>
+              <div class="calculator-field"><label for="fees">Taxas da emissão (R$)</label><input class="calculator-input" id="fees" name="fees" type="text" inputmode="decimal" data-mask="money"></div>
+              <div class="calculator-field"><label for="own-cpm">Meu custo por milheiro (R$)</label><input class="calculator-input" id="own-cpm" name="own-cpm" type="text" inputmode="decimal" data-mask="money"></div>
+            </div>
+            <div class="calculator-results" aria-live="polite">
+              <div class="calculator-result"><span>Valor obtido por milheiro</span><output data-output="redemption-value">—</output></div>
+              <div class="calculator-result"><span>Custo real da emissão</span><output data-output="real-cost">—</output></div>
+              <div class="calculator-result"><span>Economia potencial</span><output data-output="savings">—</output></div>
+              <div class="calculator-result"><span>Economia em porcentagem</span><output data-output="savings-pct">—</output></div>
+            </div>
+          </div>
+          <div class="callout warning"><div class="callout-icon">!</div><div><strong>Compare a mesma passagem</strong><p>Use a mesma data, bagagem, horário e conexão. Se a economia ficar negativa, pagar em dinheiro é mais barato.</p></div></div>
+        </section>
+        <section class="section"><div class="kicker">02 · Fórmulas</div><h2>Quanto a emissão custa e quanto você economiza</h2>
+          <div class="formula"><div class="formula-label">Custo real da emissão</div><div class="equation">(milhas ÷ 1.000 × meu CPM) + taxas</div></div>
+          <div class="formula"><div class="formula-label">Economia</div><div class="equation">passagem em dinheiro − custo real da emissão</div></div>
+        </section>
+      </div>
+      <div class="lesson-actions"><button type="button" class="btn" id="btn-toggle-complete">Marcar como concluída</button></div><footer class="footer"><nav class="actions" id="lesson-pager" aria-label="Navegação entre aulas"></nav></footer>
+    </article></main>
+  </div>
+  <script src="../../script.js"></script><script src="../../script-calculadoras.js"></script>
+</body>
+</html>

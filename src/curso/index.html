@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <base href="/src/curso/">
+  <title>Milhas &amp; Pontos — Do zero à primeira passagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-root="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">M&amp;P</div>
+        <div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div>
+      </a>
+      <div class="top-note">Do zero à primeira passagem</div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas">
+      <div class="course-nav-label">Aulas</div>
+      <nav id="curriculum" aria-label="Módulos do curso"></nav>
+      <footer class="course-progress">
+        <div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div>
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-pct" id="progress-pct">0% concluído</div>
+      </footer>
+    </aside>
+    <main id="conteudo">
+      <article class="lesson">
+        <header class="hero">
+          <div class="eyebrow">Curso · 6 módulos</div>
+          <h1>Milhas &amp; Pontos — Do zero à primeira passagem</h1>
+          <p class="lead">Aprenda a acumular e comprar pontos com custo conhecido, avaliar bônus de transferência, encontrar passagens com milhas e decidir quando uma operação realmente vale a pena.</p>
+          <div class="meta">
+            <span class="pill">Leitura no seu ritmo</span>
+            <span class="pill">Progresso salvo neste navegador</span>
+          </div>
+        </header>
+        <div class="body">
+          <section class="section" id="proposta">
+            <div class="kicker">01 · A proposta</div>
+            <h2>Decidir bem, não acumular por acumular</h2>
+            <p>Este curso não ensina a juntar o maior saldo possível. Ensina a fazer contas e a conferir regras antes de gastar dinheiro com pontos.</p>
+            <div class="grid3">
+              <div class="card soft">
+                <div class="card-label">Você vai aprender</div>
+                <h3>Quanto custam seus pontos</h3>
+                <p class="muted">Calcular o custo por milheiro e comparar ofertas sem cair em números enganosos.</p>
+              </div>
+              <div class="card soft">
+                <div class="card-label">Você vai aprender</div>
+                <h3>Quando transferir</h3>
+                <p class="muted">Ler as regras de um bônus e calcular o custo depois da transferência.</p>
+              </div>
+              <div class="card soft">
+                <div class="card-label">Você vai aprender</div>
+                <h3>Se a passagem compensa</h3>
+                <p class="muted">Comparar o preço em dinheiro com o custo real de emitir com milhas e taxas.</p>
+              </div>
+            </div>
+            <div class="callout warning">
+              <div class="callout-icon">!</div>
+              <div>
+                <strong>Regras mudam</strong>
+                <p>Parcerias, proporções, bônus e validades mudam com frequência. Os exemplos do curso usam valores hipotéticos, sempre identificados. Antes de qualquer operação, confira o regulamento vigente no site oficial do programa.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="como-usar">
+            <div class="kicker">02 · Como usar</div>
+            <h2>Siga os módulos em ordem</h2>
+            <ol class="steps">
+              <li><strong>Uma aula por vez:</strong> cada página ensina um conceito e termina com um resumo ou checklist.</li>
+              <li><strong>Marque como concluída:</strong> o botão no topo de cada aula atualiza o progresso no menu lateral.</li>
+              <li><strong>Volte quando precisar:</strong> o progresso fica salvo neste navegador. Se você limpar os dados do navegador ou trocar de aparelho, ele recomeça do zero.</li>
+            </ol>
+          </section>
+
+          <section class="section" id="modulos">
+            <div class="kicker">03 · Índice</div>
+            <h2>Módulos do curso</h2>
+            <p>A ordem segue o caminho de uma decisão: entender o sistema, conhecer os programas, aprender a comprar, aprender a transferir, encontrar a emissão e, por fim, decidir.</p>
+            <div class="module-index" id="module-index"></div>
+          </section>
+        </div>
+      </article>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

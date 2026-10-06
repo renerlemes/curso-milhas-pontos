@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      font-family: "Inter", system-ui, sans-serif;
+      background: #0f172a;
+      color: #0f172a;
+    }
+    main { width: min(720px, 100%); }
+    h1 { color: #ffffff; font-size: 32px; font-weight: 800; }
+    p.lead { color: #94a3b8; margin: 8px 0 28px; font-size: 16px; }
+    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    a.choice {
+      display: block;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.choice:hover { outline: 3px solid #93c5fd; }
+    a.choice:focus-visible { outline: 3px solid #2563eb; }
+    .kicker {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #2563eb;
+    }
+    a.choice h2 { margin: 10px 0 8px; font-size: 24px; font-weight: 800; }
+    a.choice p { color: #64748b; font-size: 15px; line-height: 1.45; }
+    @media (max-width: 640px) { .choices { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Milhas &amp; Pontos</h1>
+    <p class="lead">Do zero à primeira passagem</p>
+    <div class="choices">
+      <a class="choice" href="/curso/">
+        <div class="kicker">Ler</div>
+        <h2>Curso</h2>
+        <p>Aulas em páginas, com menu e progresso.</p>
+      </a>
+      <a class="choice" href="/slides/">
+        <div class="kicker">Apresentar</div>
+        <h2>Slides</h2>
+        <p>A mesma matéria, um slide por vez.</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

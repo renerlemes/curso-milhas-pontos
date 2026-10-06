@@ -1,0 +1,138 @@
+<section class="slide cover-module">
+  <div class="cover-module-side">
+    <div class="cover-number">07</div>
+    <div>
+      <div class="cover-kicker">Módulo 7</div>
+      <h1>Cálculos</h1>
+      <p>Calculadoras editáveis para custo por milheiro, transferência com bônus e análise de emissão.</p>
+    </div>
+    <div class="cover-footer">Milhas &amp; Pontos • Do zero à primeira passagem</div>
+  </div>
+  <div class="cover-module-list">
+    <h2>Aulas</h2>
+    <div class="lesson-item"><div class="icon icon-4">1</div>Custo por Milheiro</div>
+    <div class="lesson-item"><div class="icon icon-4">2</div>Custo por Milheiro - Pós-transferência</div>
+    <div class="lesson-item"><div class="icon icon-4">3</div>Análise de Emissão de Passagem</div>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <div class="slide-header">
+      <span class="badge">Módulo 7 • Aula 1</span>
+      <span class="slide-num"></span>
+    </div>
+    <div class="title-section">
+      <h1>Custo por milheiro</h1>
+      <p>Descubra quanto você pagou por cada 1.000 pontos. Digite os valores.</p>
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="calculator" data-calculator="purchase">
+      <div class="split">
+        <div class="calculator-fields cols-2">
+          <div class="calculator-field"><label for="s1-points">Pontos comprados</label><input class="calculator-input" id="s1-points" name="points" type="text" inputmode="numeric" data-mask="integer"></div>
+          <div class="calculator-field"><label for="s1-paid">Valor pago (R$)</label><input class="calculator-input" id="s1-paid" name="paid" type="text" inputmode="decimal" data-mask="money"></div>
+        </div>
+        <div class="calculator-results cols-1" aria-live="polite">
+          <div class="calculator-result"><span>Custo por milheiro</span><output data-output="cpm">—</output></div>
+        </div>
+      </div>
+    </div>
+    <div class="formula-box">
+      <div class="formula-label">Fórmula</div>
+      <div class="equation">(valor pago ÷ pontos comprados) × 1.000</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <div class="slide-header">
+      <span class="badge">Módulo 7 • Aula 2</span>
+      <span class="slide-num"></span>
+    </div>
+    <div class="title-section">
+      <h1>Custo por milheiro - Pós-transferência</h1>
+      <p>Veja quantos pontos chegam e quanto cada milheiro passa a custar. Proporção primeiro, bônus depois.</p>
+    </div>
+  </div>
+  <div class="slide-body" style="gap:14px">
+    <div class="calculator" data-calculator="transfer">
+      <div class="calculator-fields">
+        <div class="calculator-field"><label for="s2-points">Pontos para transferir</label><input class="calculator-input" id="s2-points" name="points" type="text" inputmode="numeric" data-mask="integer"></div>
+        <div class="calculator-field"><label for="s2-paid">Valor pago (R$)</label><input class="calculator-input" id="s2-paid" name="paid" type="text" inputmode="decimal" data-mask="money"></div>
+        <div class="calculator-field"><label for="s2-bonus">Bônus de transferência (%)</label><input class="calculator-input" id="s2-bonus" name="bonus" type="text" inputmode="decimal" data-mask="decimal"></div>
+        <div class="calculator-field"><label for="s2-ratio">Pontos para 1 milha</label><input class="calculator-input" id="s2-ratio" name="ratio" type="text" inputmode="decimal" data-mask="decimal"></div>
+      </div>
+      <div class="calculator-results cols-3" aria-live="polite">
+        <div class="calculator-result"><span>Pontos recebidos</span><output data-output="received">—</output></div>
+        <div class="calculator-result"><span>CPM antes da transferência</span><output data-output="purchase-cpm">—</output></div>
+        <div class="calculator-result"><span>CPM pós-transferência</span><output data-output="transfer-cpm">—</output></div>
+      </div>
+    </div>
+    <div class="formula-row">
+      <div class="formula-box">
+        <div class="formula-label">Pontos recebidos</div>
+        <div class="equation">(pontos ÷ pontos para 1 milha) × (1 + bônus ÷ 100)</div>
+      </div>
+      <div class="formula-box">
+        <div class="formula-label">CPM pós-transferência</div>
+        <div class="equation">(valor pago ÷ pontos recebidos) × 1.000</div>
+      </div>
+    </div>
+  </div>
+  <div class="alert-box info">
+    <div class="alert-icon">i</div>
+    <div class="alert-content">
+      <h4>Proporção</h4>
+      <p>Se 1 ponto vira 1 milha, use 1. Se 2 pontos viram 1 milha, use 2: 100.000 viram 50.000 antes do bônus. Ex.: R$ 1.500 por 200.000 recebidos = R$ 7,50.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <div class="slide-header">
+      <span class="badge">Módulo 7 • Aula 3</span>
+      <span class="slide-num"></span>
+    </div>
+    <div class="title-section">
+      <h1>Análise de emissão de passagem</h1>
+      <p>Compare o custo real das milhas com a mesma passagem em dinheiro.</p>
+    </div>
+  </div>
+  <div class="slide-body" style="gap:14px">
+    <div class="calculator" data-calculator="emission">
+      <div class="calculator-fields">
+        <div class="calculator-field"><label for="s3-miles">Milhas da passagem</label><input class="calculator-input" id="s3-miles" name="miles" type="text" inputmode="numeric" data-mask="integer"></div>
+        <div class="calculator-field"><label for="s3-cash-fare">Passagem em dinheiro (R$)</label><input class="calculator-input" id="s3-cash-fare" name="cash-fare" type="text" inputmode="decimal" data-mask="money"></div>
+        <div class="calculator-field"><label for="s3-fees">Taxas da emissão (R$)</label><input class="calculator-input" id="s3-fees" name="fees" type="text" inputmode="decimal" data-mask="money"></div>
+        <div class="calculator-field"><label for="s3-own-cpm">Meu custo por milheiro (R$)</label><input class="calculator-input" id="s3-own-cpm" name="own-cpm" type="text" inputmode="decimal" data-mask="money"></div>
+      </div>
+      <div class="calculator-results" aria-live="polite">
+        <div class="calculator-result"><span>Valor obtido por milheiro</span><output data-output="redemption-value">—</output></div>
+        <div class="calculator-result"><span>Custo real da emissão</span><output data-output="real-cost">—</output></div>
+        <div class="calculator-result"><span>Economia potencial</span><output data-output="savings">—</output></div>
+        <div class="calculator-result"><span>Economia em %</span><output data-output="savings-pct">—</output></div>
+      </div>
+    </div>
+    <div class="formula-row">
+      <div class="formula-box">
+        <div class="formula-label">Custo real da emissão</div>
+        <div class="equation">(milhas ÷ 1.000 × meu CPM) + taxas</div>
+      </div>
+      <div class="formula-box">
+        <div class="formula-label">Economia</div>
+        <div class="equation">passagem em dinheiro − custo real</div>
+      </div>
+    </div>
+  </div>
+  <div class="alert-box">
+    <div class="alert-icon">!</div>
+    <div class="alert-content">
+      <h4>Compare a mesma passagem</h4>
+      <p>Use a mesma data, bagagem, horário e conexão. Se a economia ficar negativa, pagar em dinheiro é mais barato.</p>
+    </div>
+  </div>
+</section>

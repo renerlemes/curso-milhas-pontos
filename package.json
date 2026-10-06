@@ -1,0 +1,15 @@
+{
+	"name": "milhas-e-pontos",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Milhas & Pontos. Curso em src/curso/ e slides em src/slides/; yarn start na raiz",
+	"scripts": {
+		"start": "node server.js",
+		"biome:check": "biome check .",
+		"biome:fix": "biome check --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15",
+		"serve": "^14.2.4"
+	}
+}

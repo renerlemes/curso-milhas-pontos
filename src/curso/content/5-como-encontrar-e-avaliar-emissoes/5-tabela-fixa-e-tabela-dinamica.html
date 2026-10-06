@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Tabela Fixa e Tabela Dinâmica — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-lesson="m5-a5" data-root="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../../index.html">
+        <div class="brand-mark">M&amp;P</div>
+        <div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div>
+      </a>
+      <div class="top-note">Do zero à primeira passagem</div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas">
+      <div class="course-nav-label"><a href="../../index.html">Aulas</a></div>
+      <nav id="curriculum" aria-label="Módulos do curso"></nav>
+      <footer class="course-progress">
+        <div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div>
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-pct" id="progress-pct">0% concluído</div>
+      </footer>
+    </aside>
+    <main id="conteudo">
+      <article class="lesson">
+        <header class="hero">
+          <div class="eyebrow">Módulo 5 · Como Encontrar e Avaliar Emissões</div>
+          <h1>Tabela Fixa e Tabela Dinâmica</h1>
+          <p class="lead">Dois jeitos de o programa cobrar milhas pela mesma viagem.</p>
+          <div class="meta">
+            <span class="pill">Módulo 5 - Aula 5</span>
+          </div>
+        </header>
+        <div class="body">
+          <section class="section" id="dois-modelos">
+            <div class="kicker">01 · Dois modelos</div>
+            <h2>Preço publicado ou preço que muda</h2>
+            <div class="grid2">
+              <div class="card">
+                <h3>Tabela fixa</h3>
+                <p class="muted">O programa define antes quantas milhas custa cada trecho. O número não muda com o preço em dinheiro daquele dia.</p>
+              </div>
+              <div class="card">
+                <h3>Tabela dinâmica</h3>
+                <p class="muted">As milhas sobem e descem junto com a tarifa. Passagem cara em dinheiro tende a pedir mais milhas.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="tabela-fixa">
+            <div class="kicker">02 · Tabela fixa na prática</div>
+            <h2>Como funciona a tabela fixa</h2>
+            <ul>
+              <li><strong>Quem define:</strong> o programa de fidelidade monta uma tabela com o preço em milhas. Ele costuma variar pela distância ou região, pela classe (econômica ou executiva) e, às vezes, pela época.</li>
+              <li><strong>Como usar:</strong> você pesquisa a data no site ou app do programa. Se aparecer passagem com milhas pelo preço da tabela, é só emitir com as suas milhas e pagar as taxas.</li>
+              <li><strong>Nem sempre tem vaga:</strong> a companhia separa poucos assentos para milhas em cada voo. Quando eles acabam, aquela data some ou fica mais cara, mesmo com o avião tendo lugar à venda em dinheiro.</li>
+            </ul>
+            <div class="callout">
+              <div class="callout-icon">i</div>
+              <div>
+                <strong>Exemplo inventado</strong>
+                <p>Uma tabela diz que um trecho de até 1.000 km custa 10.000 milhas. Se a passagem em dinheiro estiver R$ 300 ou R$ 1.500, continua custando 10.000 milhas, desde que ainda tenha assento para milhas.</p>
+              </div>
+            </div>
+            <p class="muted">Por isso a tabela fixa compensa mais quando a passagem em dinheiro está cara e ainda existe vaga pelo preço da tabela.</p>
+          </section>
+
+          <section class="section" id="cuidado">
+            <div class="kicker">03 · O cuidado</div>
+            <h2>Cada programa tem a própria regra</h2>
+            <div class="callout warning">
+              <div class="callout-icon">!</div>
+              <div>
+                <strong>Atenção</strong>
+                <p>A tabela de um programa não vale para outro. Confira no site oficial como aquele programa cobra hoje. A regra pode mudar.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="lesson-actions">
+          <button type="button" class="btn" id="btn-toggle-complete">Marcar como concluída</button>
+        </div>
+        <footer class="footer">
+          <nav class="actions" id="lesson-pager" aria-label="Navegação entre aulas"></nav>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+</html>
