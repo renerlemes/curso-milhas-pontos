@@ -29,7 +29,7 @@ Saber onde os pontos ficam, para onde podem ir e o que conferir.
 | 1 | Livelo e Esfera | O que são, usar no programa ou transferir, e que para participar basta o cadastro gratuito; planos pagos são opcionais. Sem o clube, os pontos normalmente expiram. |
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada programa, os planos pagos, que o mesmo voo custa milhas diferentes em cada um e que milhas não passam de um programa para outro sozinhas. Viaje Fácil da Smiles: reservar com taxa de R$ 249,90 e quitar as milhas até 60 dias antes do primeiro voo. |
 | 3 | Iberia Club e Avios | Quem usa Avios (Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair), quando transferir pode compensar e que o caminho precisa existir. |
-| 4 | Accor | Em breve. |
+| 4 | Accor | Mostrar que 1.000 Pontos Reward valem € 20 de desconto na rede ALL e um exemplo ilustrativo: Esfera → Azul → Accor para cinco noites nas Maldivas, de R$ 13.361,17 para R$ 7.870,82. |
 | 5 | Cadastros | Usar o mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
 | 6 | Transferências | Quatro perguntas: dá para transferir, quanto chega, quando vence e posso participar da promoção. Transferência em geral não volta. |
 | 7 | Usando os pontos | Comparar o valor dos pontos numa troca e numa compra que acumula. Fritadeira Oster OFRT660: 34.920 pontos contra R$ 299,90 (R$ 8,59 por 1.000, custo de R$ 35). Tênis Corre 5: compra direta R$ 599,99 ou pelo link Livelo, com cerca de 6.000 pontos estimados em R$ 198 e custo efetivo R$ 401,93. Smart TV TCL 65": compra direta R$ 4.179,05 ou pelo link Esfera a R$ 4.399,00, com 21.995 pontos estimados em R$ 769,83 e custo efetivo R$ 3.629,17. |
