@@ -70,7 +70,7 @@ Achar a passagem e verificar se compensa.
 | 4 | Pesquisar em grupos de WhatsApp | Receber alertas em grupos, como os do Passageiro de Primeira, e confirmar a oferta no canal oficial. O Estevam Pelo Mundo também publica grupos de alerta. |
 | 5 | Tabela fixa e tabela dinâmica | Explicar os dois modelos de preço em milhas sem tratar a tabela de um programa como a de outro. |
 | 6 | Dinheiro, milhas e taxas | Comparar a passagem equivalente e separar CPM da compra, CPM depois do bônus e o custo desta emissão. CPM baixo não torna a emissão vantajosa. |
-| 7 | Comparações | Comparar dinheiro e pontos em quatro rotas: São Paulo–Recife, Paris, Buenos Aires em executiva e Doha em executiva. Mostrar custo dos pontos e valor entregue por milheiro. |
+| 7 | Comparações | Comparar dinheiro e pontos em quatro rotas e fechar mostrando que o uso muda o valor: cerca de 2, 3, 6 e 9 vezes a referência em Nordeste, Europa, Buenos Aires e Doha. |
 
 ## Módulo 6 — Caso prático e checklist final
 
