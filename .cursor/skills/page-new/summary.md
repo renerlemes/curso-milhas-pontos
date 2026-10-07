@@ -27,7 +27,7 @@ Saber onde os pontos ficam, para onde podem ir e o que conferir.
 | Aula | Título | Objetivo |
 | --- | --- | --- |
 | 1 | Livelo e Esfera | O que são, usar no programa ou transferir, e que para participar basta o cadastro gratuito; planos pagos são opcionais. Sem o clube, os pontos normalmente expiram. |
-| 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada programa, os planos pagos, que o mesmo voo custa milhas diferentes em cada um e que milhas não passam de um programa para outro sozinhas. |
+| 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada programa, os planos pagos, que o mesmo voo custa milhas diferentes em cada um e que milhas não passam de um programa para outro sozinhas. Viaje Fácil da Smiles: reservar com taxa de R$ 249,90 e quitar as milhas até 60 dias antes do primeiro voo. |
 | 3 | Iberia Club e Avios | Quem usa Avios (Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair), quando transferir pode compensar e que o caminho precisa existir. |
 | 4 | Cadastros | Usar o mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
 | 5 | Transferências | Quatro perguntas: dá para transferir, quanto chega, quando vence e posso participar da promoção. Transferência em geral não volta. |
