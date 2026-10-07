@@ -19,7 +19,8 @@
 				{ "numero": 2, "titulo": "Azul Fidelidade, Smiles e LATAM Pass" },
 				{ "numero": 3, "titulo": "Iberia Club e Avios" },
 				{ "numero": 4, "titulo": "Cadastros" },
-				{ "numero": 5, "titulo": "Transferências" }
+				{ "numero": 5, "titulo": "Transferências" },
+				{ "numero": 6, "titulo": "Usando os Pontos" }
 			]
 		},
 		{
@@ -55,7 +56,8 @@
 				{ "numero": 3, "titulo": "Pesquisar em Sites Especializados" },
 				{ "numero": 4, "titulo": "Pesquisar em Grupos de WhatsApp" },
 				{ "numero": 5, "titulo": "Tabela Fixa e Tabela Dinâmica" },
-				{ "numero": 6, "titulo": "Dinheiro, Milhas e Taxas" }
+				{ "numero": 6, "titulo": "Dinheiro, Milhas e Taxas" },
+				{ "numero": 7, "titulo": "Comparações" }
 			]
 		},
 		{
@@ -73,11 +75,13 @@
 		{
 			"numero": 7,
 			"titulo": "Cálculos",
-			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus e análise de emissão.",
+			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus, análise de emissão e o valor em reais de uma emissão.",
 			"aulas": [
-				{ "numero": 1, "titulo": "Custo por Milheiro" },
-				{ "numero": 2, "titulo": "Custo por Milheiro - Pós-transferência" },
-				{ "numero": 3, "titulo": "Análise de Emissão de Passagem" }
+				{ "numero": 1, "titulo": "Valores de Referência do Milheiro" },
+				{ "numero": 2, "titulo": "Custo por Milheiro" },
+				{ "numero": 3, "titulo": "Custo por Milheiro - Pós-transferência" },
+				{ "numero": 4, "titulo": "Análise de Emissão de Passagem" },
+				{ "numero": 5, "titulo": "Cálculo de Emissão" }
 			]
 		}
 	]

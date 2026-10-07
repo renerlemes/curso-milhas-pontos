@@ -269,6 +269,105 @@
 		setNegative(calculator, "savings-pct", savingsPct < 0);
 	}
 
+	function optionalPoints(calculator, name) {
+		var field = calculator.querySelector(`[name="${name}"]`);
+		var points;
+		if (!field || !field.value.trim()) return null;
+		points = readNumber(field);
+		return points > 0 ? points : null;
+	}
+
+	function optionalAmount(calculator, name) {
+		var field = calculator.querySelector(`[name="${name}"]`);
+		var amount;
+		if (!field || !field.value.trim()) return null;
+		amount = readNumber(field);
+		return Number.isFinite(amount) && amount >= 0 ? amount : null;
+	}
+
+	function legCost(points, taxes, reference) {
+		var hasPoints = points != null;
+		if (!hasPoints && taxes == null) return NaN;
+		if (hasPoints && !Number.isFinite(reference)) return NaN;
+		return (
+			((hasPoints ? points : 0) / 1000) * (hasPoints ? reference : 0) +
+			(taxes != null ? taxes : 0)
+		);
+	}
+
+	function legPhrase(points, taxes) {
+		var parts = [];
+		if (points != null) parts.push(`${formatNumber(points, 0)} pontos`);
+		if (taxes != null) parts.push(`${formatMoney(taxes)} de taxas`);
+		return parts.join(" e ");
+	}
+
+	function legLabel(name, points, taxes) {
+		var phrase = legPhrase(points, taxes);
+		return phrase ? `${name} · ${phrase}` : name;
+	}
+
+	function setLabel(calculator, name, text) {
+		var label = calculator.querySelector(`[data-label="${name}"]`);
+		if (label) label.textContent = text;
+	}
+
+	function calculateAward(calculator) {
+		var programField = calculator.querySelector('[name="program"]');
+		var programOption = programField?.selectedOptions?.[0];
+		var reference = programOption
+			? Number(programOption.dataset.reference)
+			: NaN;
+		var programName =
+			programOption && programOption.value
+				? programOption.textContent.trim()
+				: "";
+		var note = calculator.querySelector("[data-reference-note]");
+		var cabinField = calculator.querySelector('[name="cabin"]');
+		var cabinOption = cabinField?.selectedOptions?.[0];
+		var cabinName =
+			cabinOption && cabinOption.value ? cabinOption.textContent.trim() : "";
+		var outbound = optionalPoints(calculator, "points-out");
+		var inbound = optionalPoints(calculator, "points-back");
+		var outboundFees = optionalAmount(calculator, "fees-out");
+		var inboundFees = optionalAmount(calculator, "fees-back");
+		var outboundValue = legCost(outbound, outboundFees, reference);
+		var inboundValue = legCost(inbound, inboundFees, reference);
+		var totalValue =
+			Number.isFinite(outboundValue) || Number.isFinite(inboundValue)
+				? (Number.isFinite(outboundValue) ? outboundValue : 0) +
+					(Number.isFinite(inboundValue) ? inboundValue : 0)
+				: NaN;
+		var detail = calculator.querySelector('[data-summary="detail"]');
+		var bits = [];
+		var legs = [];
+
+		if ((outbound != null || inbound != null) && !Number.isFinite(reference)) {
+			totalValue = NaN;
+		}
+		if (note) note.classList.toggle("is-blank", !Number.isFinite(reference));
+		setOutput(
+			calculator,
+			"reference",
+			Number.isFinite(reference) ? formatMoney(reference) : "—",
+		);
+		setLabel(calculator, "outbound", legLabel("Ida", outbound, outboundFees));
+		setLabel(calculator, "inbound", legLabel("Volta", inbound, inboundFees));
+		setOutput(calculator, "outbound", formatMoney(outboundValue));
+		setOutput(calculator, "inbound", formatMoney(inboundValue));
+		setOutput(calculator, "total", formatMoney(totalValue));
+
+		if (!detail) return;
+		if (cabinName) bits.push(cabinName);
+		if (programName) bits.push(programName);
+		if (Number.isFinite(outboundValue))
+			legs.push(`${legPhrase(outbound, outboundFees)} na ida`);
+		if (Number.isFinite(inboundValue))
+			legs.push(`${legPhrase(inbound, inboundFees)} na volta`);
+		if (legs.length) bits.push(legs.join(" e "));
+		detail.textContent = Number.isFinite(totalValue) ? bits.join(" · ") : "";
+	}
+
 	var calculators = document.querySelectorAll("[data-calculator]");
 	calculators.forEach((calculator) => {
 		var type = calculator.dataset.calculator;
@@ -277,24 +376,29 @@
 				? calculatePurchase
 				: type === "transfer"
 					? calculateTransfer
-					: calculateEmission;
+					: type === "award"
+						? calculateAward
+						: calculateEmission;
+
+		function onEdit(event) {
+			var field = event.target;
+			if (field.classList?.contains("calculator-input") && field.dataset.mask) {
+				if (field.dataset.mask === "money") handleMoneyInput(field);
+				else applyMask(field);
+			}
+			calculate(calculator);
+		}
 
 		calculator.querySelectorAll(".calculator-input").forEach((field) => {
 			if (field.dataset.mask === "money") {
 				field.dataset.moneyValue = formatMoneyInput(field.value);
 				field.value = field.dataset.moneyValue;
-			} else {
+			} else if (field.dataset.mask) {
 				applyMask(field);
 			}
 		});
-		calculator.addEventListener("input", (event) => {
-			if (event.target.classList?.contains("calculator-input")) {
-				if (event.target.dataset.mask === "money")
-					handleMoneyInput(event.target);
-				else applyMask(event.target);
-			}
-			calculate(calculator);
-		});
+		calculator.addEventListener("input", onEdit);
+		calculator.addEventListener("change", onEdit);
 		calculate(calculator);
 	});
 })();

@@ -42,7 +42,10 @@ function asciiHeader(value) {
 function safeHeaders(response) {
 	const setHeader = response.setHeader;
 	response.setHeader = (name, value) => {
-		if (name.toLowerCase() === "content-disposition" && typeof value === "string") {
+		if (
+			name.toLowerCase() === "content-disposition" &&
+			typeof value === "string"
+		) {
 			return setHeader.call(response, name, asciiHeader(value));
 		}
 		return setHeader.call(response, name, value);
@@ -57,7 +60,9 @@ function safeHeaders(response) {
 					? statusMessage
 					: null;
 		if (target && typeof target["Content-Disposition"] === "string") {
-			target["Content-Disposition"] = asciiHeader(target["Content-Disposition"]);
+			target["Content-Disposition"] = asciiHeader(
+				target["Content-Disposition"],
+			);
 		}
 		return writeHead.call(response, statusCode, statusMessage, headers);
 	};

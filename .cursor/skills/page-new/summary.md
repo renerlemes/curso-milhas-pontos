@@ -26,11 +26,12 @@ Saber onde os pontos ficam, para onde podem ir e o que conferir.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Livelo e Esfera | O que são, usar no programa ou transferir, e que para participar basta o cadastro gratuito; planos pagos são opcionais. |
+| 1 | Livelo e Esfera | O que são, usar no programa ou transferir, e que para participar basta o cadastro gratuito; planos pagos são opcionais. Sem o clube, os pontos normalmente expiram. |
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada programa, os planos pagos, que o mesmo voo custa milhas diferentes em cada um e que milhas não passam de um programa para outro sozinhas. |
 | 3 | Iberia Club e Avios | Quem usa Avios (Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair), quando transferir pode compensar e que o caminho precisa existir. |
 | 4 | Cadastros | Usar o mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
 | 5 | Transferências | Quatro perguntas: dá para transferir, quanto chega, quando vence e posso participar da promoção. Transferência em geral não volta. |
+| 6 | Usando os pontos | Comparar o valor dos pontos numa troca e numa compra que acumula. Fritadeira Oster OFRT660: 34.920 pontos contra R$ 299,90 (R$ 8,59 por 1.000, custo de R$ 35). Tênis Corre 5: compra direta R$ 599,99 ou pelo link Livelo, com cerca de 6.000 pontos estimados em R$ 198 e custo efetivo R$ 401,93. Smart TV TCL 65": compra direta R$ 4.179,05 ou pelo link Esfera a R$ 4.399,00, com 21.995 pontos estimados em R$ 769,83 e custo efetivo R$ 3.629,17. |
 
 Programas nomeados no curso: Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass, Iberia Club, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair e Avios. Não afirmar que todos são parceiros diretos entre si.
 
@@ -69,6 +70,7 @@ Achar a passagem e verificar se compensa.
 | 4 | Pesquisar em grupos de WhatsApp | Receber alertas em grupos, como os do Passageiro de Primeira, e confirmar a oferta no canal oficial. O Estevam Pelo Mundo também publica grupos de alerta. |
 | 5 | Tabela fixa e tabela dinâmica | Explicar os dois modelos de preço em milhas sem tratar a tabela de um programa como a de outro. |
 | 6 | Dinheiro, milhas e taxas | Comparar a passagem equivalente e separar CPM da compra, CPM depois do bônus e o custo desta emissão. CPM baixo não torna a emissão vantajosa. |
+| 7 | Comparações | Comparar dinheiro e pontos em quatro rotas: São Paulo–Recife, Paris, Buenos Aires em executiva e Doha em executiva. Mostrar custo dos pontos e valor entregue por milheiro. |
 
 ## Módulo 6 — Caso prático e checklist final
 
@@ -88,9 +90,11 @@ Calculadoras editáveis com resultado atualizado em tempo real.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Custo por milheiro | Calcular o CPM a partir dos pontos comprados e do valor pago. |
-| 2 | Custo por milheiro - Pós-transferência | Aplicar proporção e bônus, mostrar os pontos recebidos e comparar o CPM antes e depois da transferência. |
-| 3 | Análise de emissão de passagem | Comparar o custo real das milhas e taxas com a passagem em dinheiro, mostrando economia em reais e porcentagem. |
+| 1 | Valores de referência do milheiro | Mostrar as mesmas faixas da aula 3.4: verde, amarelo e vermelho para Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. |
+| 2 | Custo por milheiro | Calcular o CPM a partir dos pontos comprados e do valor pago. |
+| 3 | Custo por milheiro - Pós-transferência | Aplicar proporção e bônus, mostrar os pontos recebidos e comparar o CPM antes e depois da transferência. |
+| 4 | Análise de emissão de passagem | Comparar o custo real das milhas e taxas com a passagem em dinheiro, mostrando economia em reais e porcentagem. |
+| 5 | Cálculo de emissão | Estimar em reais uma emissão ou promoção: pontos e taxas de ida e de volta, opcionais, com o milheiro de referência do programa. A classe entra no resumo. |
 
 ## Temas que não viram módulo novo
 

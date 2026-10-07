@@ -496,6 +496,37 @@ details > :last-child {
 .metric.red {
 	color: var(--red);
 }
+.product-figure {
+	margin: 16px 0 4px;
+}
+.product-figure img {
+	display: block;
+	height: 180px;
+	width: auto;
+	object-fit: contain;
+	background: #fff;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	padding: 8px;
+}
+.product-figure figcaption {
+	margin-top: 8px;
+	color: var(--muted);
+	font-size: 0.92rem;
+}
+.fare-figure {
+	margin: 16px 0;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+}
+.fare-figure img {
+	display: block;
+	width: 100%;
+	max-height: 260px;
+	object-fit: contain;
+}
 .tag {
 	display: inline-block;
 	margin-bottom: 12px;
@@ -690,7 +721,17 @@ tr.total td {
 	margin-bottom: 10px;
 }
 .price-guide-head strong {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px 10px;
 	font-size: 1rem;
+}
+.program-logo {
+	display: block;
+	height: 22px;
+	width: auto;
+	object-fit: contain;
 }
 .price-guide-head span {
 	color: var(--muted);
@@ -783,6 +824,48 @@ tr.total td {
 }
 .calculator-result.negative output {
 	color: var(--red);
+}
+select.calculator-input {
+	cursor: pointer;
+	appearance: none;
+	padding-right: 2.75rem;
+	background-color: var(--white);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%2364748b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-size: 12px 8px;
+}
+.field-note {
+	margin: 6px 0 0;
+	min-height: 1.35em;
+	color: var(--muted);
+	font-size: 0.88rem;
+	font-weight: 600;
+	line-height: 1.35;
+}
+.field-note.is-blank {
+	visibility: hidden;
+}
+.field-note strong {
+	color: var(--ink);
+	font-weight: 700;
+}
+.calculator-results.award-results {
+	grid-template-columns: 1fr 1fr;
+}
+.calculator-results.award-results .main {
+	grid-column: 1 / -1;
+}
+.calculator-detail {
+	margin: 8px 0 0;
+	color: var(--muted);
+	font-size: 0.82rem;
+}
+.calculator-detail:empty {
+	display: none;
+}
+.calculator-result.main output {
+	font-size: 1.75rem;
 }
 
 /* Exercício */
@@ -935,7 +1018,8 @@ details[open] summary {
 		grid-template-columns: 1fr;
 	}
 	.calculator-fields,
-	.calculator-results {
+	.calculator-results,
+	.calculator-results.award-results {
 		grid-template-columns: 1fr;
 	}
 	.lesson {
@@ -947,7 +1031,7 @@ details[open] summary {
 	.price-guide-head {
 		display: block;
 	}
-	.price-guide-head span {
+	.price-guide-head > span {
 		display: block;
 	}
 	.price-scale {

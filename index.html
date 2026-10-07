@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       min-height: 100vh;
       display: flex;
@@ -20,10 +26,29 @@
       background: #0f172a;
       color: #0f172a;
     }
-    main { width: min(720px, 100%); }
-    h1 { color: #ffffff; font-size: 32px; font-weight: 800; }
-    p.lead { color: #94a3b8; margin: 8px 0 28px; font-size: 16px; }
-    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    main {
+      width: min(720px, 100%);
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    p.lead {
+      color: #94a3b8;
+      margin: 8px 0 28px;
+      font-size: 16px;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
     a.choice {
       display: block;
       background: #ffffff;
@@ -32,8 +57,15 @@
       text-decoration: none;
       color: inherit;
     }
-    a.choice:hover { outline: 3px solid #93c5fd; }
-    a.choice:focus-visible { outline: 3px solid #2563eb; }
+
+    a.choice:hover {
+      outline: 3px solid #93c5fd;
+    }
+
+    a.choice:focus-visible {
+      outline: 3px solid #2563eb;
+    }
+
     .kicker {
       font-size: 12px;
       font-weight: 700;
@@ -41,18 +73,34 @@
       text-transform: uppercase;
       color: #2563eb;
     }
-    a.choice h2 { margin: 10px 0 8px; font-size: 24px; font-weight: 800; }
-    a.choice p { color: #64748b; font-size: 15px; line-height: 1.45; }
-    @media (max-width: 640px) { .choices { grid-template-columns: 1fr; } }
+
+    a.choice h2 {
+      margin: 10px 0 8px;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    a.choice p {
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 640px) {
+      .choices {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main>
     <h1>Milhas &amp; Pontos</h1>
     <p class="lead">Do zero à primeira passagem</p>
     <div class="choices">
       <a class="choice" href="/curso/">
-        <div class="kicker">Ler</div>
+        <div class="kicker">ESTUDAR</div>
         <h2>Curso</h2>
         <p>Aulas em páginas, com menu e progresso.</p>
       </a>
@@ -64,4 +112,5 @@
     </div>
   </main>
 </body>
+
 </html>
