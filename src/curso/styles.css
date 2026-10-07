@@ -775,6 +775,9 @@ tr.total td {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 16px;
 }
+.calculator-fields.cols-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .calculator-field label {
 	display: block;
 	margin-bottom: 6px;
@@ -794,6 +797,14 @@ tr.total td {
 .calculator-input:focus {
 	border-color: var(--blue);
 	outline: 3px solid var(--blue-soft);
+}
+.calculator-input[readonly] {
+	font-weight: 700;
+	cursor: default;
+}
+.calculator-input[readonly]:focus {
+	border-color: var(--line);
+	outline: none;
 }
 .calculator-results {
 	display: grid;
@@ -844,17 +855,76 @@ select.calculator-input {
 	line-height: 1.35;
 }
 .field-note.is-blank {
+	display: none;
+}
+.field-note.is-spacer {
 	visibility: hidden;
 }
 .field-note strong {
 	color: var(--ink);
 	font-weight: 700;
 }
-.calculator-results.award-results {
-	grid-template-columns: 1fr 1fr;
+.result-heading {
+	margin: 22px 0 0;
+	color: var(--ink);
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.3;
 }
-.calculator-results.award-results .main {
-	grid-column: 1 / -1;
+.award-board .calculator-results {
+	margin-top: 10px;
+}
+.calculator-results.award-results {
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.calculator-results.award-results > .calculator-result {
+	grid-column: span 4;
+}
+.calculator-results.award-results > .points {
+	grid-column: span 4;
+}
+.calculator-results.award-results > .pair {
+	grid-column: span 6;
+}
+.calculator-results.award-results > .half {
+	grid-column: span 6;
+}
+.calculator-result.pair {
+	display: grid;
+	grid-template-rows: auto 56px auto;
+	align-content: start;
+}
+.result-medal {
+	display: block;
+	height: 56px;
+	width: auto;
+	margin: 4px 0 2px;
+}
+.result-logo {
+	display: block;
+	height: 32px;
+	width: auto;
+	max-width: 100%;
+	object-fit: contain;
+	object-position: left center;
+}
+.calculator-result.pair .result-medal,
+.calculator-result.pair .result-logo {
+	margin: 0;
+	align-self: center;
+	justify-self: start;
+}
+.result-choice {
+	display: block;
+	height: 56px;
+	width: auto;
+	margin: 4px 0 0;
+}
+.result-logo[hidden],
+.result-medal[hidden],
+.result-choice[hidden],
+.calculator-result output[hidden] {
+	display: none;
 }
 .calculator-detail {
 	margin: 8px 0 0;
@@ -1018,9 +1088,14 @@ details[open] summary {
 		grid-template-columns: 1fr;
 	}
 	.calculator-fields,
+	.calculator-fields.cols-3,
 	.calculator-results,
 	.calculator-results.award-results {
 		grid-template-columns: 1fr;
+	}
+	.calculator-results.award-results > .calculator-result,
+	.calculator-results.award-results > .half {
+		grid-column: auto;
 	}
 	.lesson {
 		border-radius: 12px;

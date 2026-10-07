@@ -1,0 +1,49 @@
+@import "../curso/styles.css";
+
+.layout-single {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+.reference-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	margin: 18px 0 0;
+}
+
+.reference-card {
+	padding: 16px 18px;
+	border: 1px solid #c4ead5;
+	border-radius: 10px;
+	background: var(--green-soft);
+}
+
+.reference-card strong {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--ink);
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.reference-card .muted {
+	margin: 8px 0 0;
+	font-size: 0.82rem;
+}
+
+.reference-card .metric {
+	margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+	.reference-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	.reference-grid {
+		grid-template-columns: 1fr;
+	}
+}

@@ -28,7 +28,7 @@
     }
 
     main {
-      width: min(720px, 100%);
+      width: min(1080px, 100%);
     }
 
     h1 {
@@ -45,11 +45,11 @@
 
     .choices {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
 
-    a.choice {
+    .choice {
       display: block;
       background: #ffffff;
       border-radius: 16px;
@@ -74,13 +74,13 @@
       color: #2563eb;
     }
 
-    a.choice h2 {
+    .choice h2 {
       margin: 10px 0 8px;
       font-size: 24px;
       font-weight: 800;
     }
 
-    a.choice p {
+    .choice p {
       color: #64748b;
       font-size: 15px;
       line-height: 1.45;
@@ -102,12 +102,17 @@
       <a class="choice" href="/curso/">
         <div class="kicker">ESTUDAR</div>
         <h2>Curso</h2>
-        <p>Aulas em páginas, com menu e progresso.</p>
+        <p>Aulas em páginas, com menu e progresso</p>
       </a>
       <a class="choice" href="/slides/">
         <div class="kicker">Apresentar</div>
         <h2>Slides</h2>
-        <p>A mesma matéria, um slide por vez.</p>
+        <p>A mesma matéria, um slide por vez</p>
+      </a>
+      <a class="choice" href="/calculadora/">
+        <div class="kicker">Calcular</div>
+        <h2>Calculadoras</h2>
+        <p>Contas de custo, transferência e emissão</p>
       </a>
     </div>
   </main>

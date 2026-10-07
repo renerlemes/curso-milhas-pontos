@@ -293,42 +293,92 @@
 			(taxes != null ? taxes : 0);
 	}
 
-	function legPhrase(points, taxes) {
-		var parts = [];
-		if (points != null) parts.push(`${formatNumber(points, 0)} pontos`);
-		if (taxes != null) parts.push(`${formatMoney(taxes)} de taxas`);
-		return parts.join(" e ");
+	function pointsText(points) {
+		return points != null ? `${formatNumber(points, 0)} pontos` : "";
 	}
 
-	function legLabel(name, points, taxes) {
-		var phrase = legPhrase(points, taxes);
-		return phrase ? `${name} · ${phrase}` : name;
-	}
-
-	function setLabel(calculator, name, text) {
-		var label = calculator.querySelector(`[data-label="${name}"]`);
-		if (label) label.textContent = text;
+	function showChoice(calculator, key, savings) {
+		var image = calculator.querySelector(`[data-choice-image="${key}"]`);
+		var label = calculator.querySelector(`[data-summary="choice-${key}"]`);
+		var empty = calculator.querySelector(`[data-output="choice-${key}-empty"]`);
+		var kind = "";
+		if (Number.isFinite(savings)) {
+			if (savings > 0.004) kind = "pontos";
+			else if (savings < -0.004) kind = "dinheiro";
+			else kind = "igual";
+		}
+		if (image) {
+			var src =
+				kind === "pontos"
+					? image.dataset.srcPontos
+					: kind === "dinheiro"
+						? image.dataset.srcDinheiro
+						: "";
+			image.hidden = !src;
+			if (src) {
+				image.src = src;
+				image.alt = kind === "pontos" ? "Pontos" : "Dinheiro";
+			} else {
+				image.removeAttribute("src");
+				image.alt = "";
+			}
+		}
+		if (label) {
+			label.textContent =
+				kind === "pontos"
+					? "Pontos"
+					: kind === "dinheiro"
+						? "Dinheiro"
+						: kind === "igual"
+							? "Igual"
+							: "";
+		}
+		if (empty) empty.hidden = kind !== "";
 	}
 
 	function calculateAward(calculator) {
 		var programField = calculator.querySelector('[name="program"]');
 		var programOption = programField?.selectedOptions?.[0];
-		var reference = programOption
+		var officialReference = programOption
 			? Number(programOption.dataset.reference)
 			: NaN;
+		var programValue =
+			programOption && programOption.value ? programOption.value : "";
 		var programName =
 			programOption && programOption.value
 				? programOption.textContent.trim()
 				: "";
-		var note = calculator.querySelector("[data-reference-note]");
 		var cabinField = calculator.querySelector('[name="cabin"]');
 		var cabinOption = cabinField?.selectedOptions?.[0];
 		var cabinName =
 			cabinOption && cabinOption.value ? cabinOption.textContent.trim() : "";
+		var note = calculator.querySelector("[data-reference-note]");
+		var referenceField = calculator.querySelector('[name="reference-rate"]');
+		var referenceCents;
+		var referenceFormatted;
+		if (
+			referenceField &&
+			referenceField.dataset.filledProgram !== programValue
+		) {
+			referenceField.dataset.filledProgram = programValue;
+			if (Number.isFinite(officialReference)) {
+				referenceCents = String(Math.round(officialReference * 100));
+				referenceFormatted = formatMoneyInput(referenceCents);
+				referenceField.value = referenceFormatted;
+				referenceField.dataset.moneyValue = referenceFormatted;
+			} else {
+				referenceField.value = "";
+				referenceField.dataset.moneyValue = "";
+			}
+		}
+		var usedReference = optionalAmount(calculator, "reference-rate");
+		var reference = usedReference != null ? usedReference : NaN;
 		var outbound = optionalPoints(calculator, "points-out");
 		var inbound = optionalPoints(calculator, "points-back");
 		var outboundFees = optionalAmount(calculator, "fees-out");
 		var inboundFees = optionalAmount(calculator, "fees-back");
+		var outboundCash = optionalAmount(calculator, "cash-out");
+		var inboundCash = optionalAmount(calculator, "cash-back");
 		var outboundValue = legCost(outbound, outboundFees, reference);
 		var inboundValue = legCost(inbound, inboundFees, reference);
 		var totalValue =
@@ -337,41 +387,135 @@
 					(Number.isFinite(inboundValue) ? inboundValue : 0)
 				: NaN;
 		var detail = calculator.querySelector('[data-summary="detail"]');
-		var bits = [];
-		var legs = [];
+		var outboundPoints = calculator.querySelector(
+			'[data-summary="outbound-points"]',
+		);
+		var inboundPoints = calculator.querySelector(
+			'[data-summary="inbound-points"]',
+		);
+		var outboundSavingsNote = calculator.querySelector(
+			'[data-summary="savings-note-out"]',
+		);
+		var inboundSavingsNote = calculator.querySelector(
+			'[data-summary="savings-note-back"]',
+		);
+		var cashTotal =
+			outboundCash == null && inboundCash == null
+				? NaN
+				: (outboundCash != null ? outboundCash : 0) +
+					(inboundCash != null ? inboundCash : 0);
+		var outboundReady =
+			outboundCash != null && outbound != null && Number.isFinite(outboundValue);
+		var inboundReady =
+			inboundCash != null && inbound != null && Number.isFinite(inboundValue);
+		var outboundSavings = outboundReady ? outboundCash - outboundValue : NaN;
+		var inboundSavings = inboundReady ? inboundCash - inboundValue : NaN;
+		var outboundSavingsPct =
+			Number.isFinite(outboundSavings) && outboundCash > 0
+				? (outboundSavings / outboundCash) * 100
+				: NaN;
+		var inboundSavingsPct =
+			Number.isFinite(inboundSavings) && inboundCash > 0
+				? (inboundSavings / inboundCash) * 100
+				: NaN;
+		var pendingNote =
+			"Preencha os pontos e o milheiro do trecho para comparar.";
 
 		if ((outbound != null || inbound != null) && !Number.isFinite(reference)) {
 			totalValue = NaN;
 		}
-		if (note) note.classList.toggle("is-blank", !Number.isFinite(reference));
+		if (note) note.classList.toggle("is-blank", !Number.isFinite(officialReference));
 		setOutput(
 			calculator,
 			"reference",
-			Number.isFinite(reference) ? formatMoney(reference) : "—",
-		);
-		setLabel(
-			calculator,
-			"outbound",
-			legLabel("Ida", outbound, outboundFees),
-		);
-		setLabel(
-			calculator,
-			"inbound",
-			legLabel("Volta", inbound, inboundFees),
+			Number.isFinite(officialReference) ? formatMoney(officialReference) : "—",
 		);
 		setOutput(calculator, "outbound", formatMoney(outboundValue));
 		setOutput(calculator, "inbound", formatMoney(inboundValue));
 		setOutput(calculator, "total", formatMoney(totalValue));
+		setOutput(
+			calculator,
+			"cash-outbound",
+			outboundCash != null ? formatMoney(outboundCash) : "—",
+		);
+		setOutput(
+			calculator,
+			"cash-inbound",
+			inboundCash != null ? formatMoney(inboundCash) : "—",
+		);
+		setOutput(calculator, "cash", formatMoney(cashTotal));
+		setOutput(calculator, "savings-out", formatMoney(outboundSavings));
+		setOutput(calculator, "savings-back", formatMoney(inboundSavings));
+		setOutput(
+			calculator,
+			"savings-pct-out",
+			Number.isFinite(outboundSavingsPct)
+				? `${formatNumber(outboundSavingsPct, 2)}%`
+				: "—",
+		);
+		setOutput(
+			calculator,
+			"savings-pct-back",
+			Number.isFinite(inboundSavingsPct)
+				? `${formatNumber(inboundSavingsPct, 2)}%`
+				: "—",
+		);
+		setNegative(calculator, "savings-out", outboundSavings < 0);
+		setNegative(calculator, "savings-pct-out", outboundSavingsPct < 0);
+		setNegative(calculator, "savings-back", inboundSavings < 0);
+		setNegative(calculator, "savings-pct-back", inboundSavingsPct < 0);
+		if (outboundSavingsNote) {
+			outboundSavingsNote.textContent =
+				outboundCash != null && !outboundReady ? pendingNote : "";
+		}
+		if (inboundSavingsNote) {
+			inboundSavingsNote.textContent =
+				inboundCash != null && !inboundReady ? pendingNote : "";
+		}
+		showChoice(calculator, "out", outboundSavings);
+		showChoice(calculator, "back", inboundSavings);
 
-		if (!detail) return;
-		if (cabinName) bits.push(cabinName);
-		if (programName) bits.push(programName);
-		if (Number.isFinite(outboundValue))
-			legs.push(`${legPhrase(outbound, outboundFees)} na ida`);
-		if (Number.isFinite(inboundValue))
-			legs.push(`${legPhrase(inbound, inboundFees)} na volta`);
-		if (legs.length) bits.push(legs.join(" e "));
-		detail.textContent = Number.isFinite(totalValue) ? bits.join(" · ") : "";
+		var logo = calculator.querySelector("[data-program-logo]");
+		var logoFallback = calculator.querySelector('[data-output="program-empty"]');
+		var logoSrc = programOption ? programOption.dataset.logo : "";
+		var totalPoints =
+			outbound != null || inbound != null
+				? (outbound != null ? outbound : 0) + (inbound != null ? inbound : 0)
+				: NaN;
+		if (logo) {
+			logo.hidden = !logoSrc;
+			if (logoSrc) {
+				logo.src = logoSrc;
+				logo.alt = programName;
+			} else {
+				logo.removeAttribute("src");
+				logo.alt = "";
+			}
+		}
+		if (logoFallback) logoFallback.hidden = Boolean(logoSrc);
+		var medal = calculator.querySelector("[data-class-medal]");
+		var className = calculator.querySelector('[data-summary="class-name"]');
+		var classEmpty = calculator.querySelector('[data-output="class-empty"]');
+		var medalSrc = cabinOption ? cabinOption.dataset.medal || "" : "";
+		if (medal) {
+			medal.hidden = !medalSrc;
+			if (medalSrc) {
+				medal.src = medalSrc;
+				medal.alt = cabinName;
+			} else {
+				medal.removeAttribute("src");
+				medal.alt = "";
+			}
+		}
+		if (className) className.textContent = cabinName;
+		if (classEmpty) classEmpty.hidden = Boolean(medalSrc);
+		if (outboundPoints) outboundPoints.textContent = pointsText(outbound);
+		if (inboundPoints) inboundPoints.textContent = pointsText(inbound);
+		if (detail) {
+			detail.textContent = Number.isFinite(totalPoints)
+				? pointsText(totalPoints)
+				: "";
+		}
 	}
 
 	var calculators = document.querySelectorAll("[data-calculator]");

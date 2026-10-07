@@ -5,6 +5,8 @@
 		{ "source": "/curso", "destination": "/src/curso/index.html" },
 		{ "source": "/curso/", "destination": "/src/curso/index.html" },
 		{ "source": "/slides", "destination": "/src/slides/index.html" },
-		{ "source": "/slides/", "destination": "/src/slides/index.html" }
+		{ "source": "/slides/", "destination": "/src/slides/index.html" },
+		{ "source": "/calculadora", "destination": "/src/calculadora/index.html" },
+		{ "source": "/calculadora/", "destination": "/src/calculadora/index.html" }
 	]
 }

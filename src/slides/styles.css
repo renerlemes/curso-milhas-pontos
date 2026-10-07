@@ -981,6 +981,10 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.calculator-fields.cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
 .calculator-field label {
 	display: block;
 	font-size: 13px;
@@ -1006,6 +1010,15 @@ body {
 	border-color: var(--blue);
 }
 
+.calculator-input[readonly] {
+	cursor: default;
+}
+
+.calculator-input[readonly]:focus {
+	outline: none;
+	border-color: #cbd5e1;
+}
+
 select.calculator-input {
 	cursor: pointer;
 	appearance: none;
@@ -1027,6 +1040,10 @@ select.calculator-input {
 }
 
 .field-note.is-blank {
+	display: none;
+}
+
+.field-note.is-spacer {
 	visibility: hidden;
 }
 
@@ -1057,6 +1074,81 @@ select.calculator-input {
 
 .calculator-results.cols-3 {
 	grid-template-columns: repeat(3, 1fr);
+}
+
+.result-heading {
+	margin: 16px 0 0;
+	color: var(--ink);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.award-board .calculator-results {
+	margin-top: 8px;
+}
+
+.calculator-results.award-results {
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.calculator-results.award-results > .calculator-result {
+	grid-column: span 4;
+}
+
+.calculator-results.award-results > .points {
+	grid-column: span 4;
+}
+
+.calculator-results.award-results > .pair {
+	grid-column: span 6;
+}
+
+.calculator-results.award-results > .half {
+	grid-column: span 6;
+}
+
+.calculator-result.pair {
+	display: grid;
+	grid-template-rows: auto 64px auto;
+	align-content: start;
+}
+
+.result-medal {
+	display: block;
+	height: 64px;
+	width: auto;
+	margin: 4px 0 2px;
+}
+
+.result-logo {
+	display: block;
+	height: 36px;
+	width: auto;
+	max-width: 100%;
+	object-fit: contain;
+	object-position: left center;
+}
+
+.calculator-result.pair .result-medal,
+.calculator-result.pair .result-logo {
+	margin: 0;
+	align-self: center;
+	justify-self: start;
+}
+
+.result-choice {
+	display: block;
+	height: 64px;
+	width: auto;
+	margin: 4px 0 0;
+}
+
+.result-logo[hidden],
+.result-medal[hidden],
+.result-choice[hidden],
+.calculator-result output[hidden] {
+	display: none;
 }
 
 .calculator-result {

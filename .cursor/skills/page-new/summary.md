@@ -93,9 +93,8 @@ Calculadoras editáveis com resultado atualizado em tempo real.
 | --- | --- | --- |
 | 1 | Valores de referência do milheiro | Mostrar as mesmas faixas da aula 3.4: verde, amarelo e vermelho para Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. |
 | 2 | Custo por milheiro | Calcular o CPM a partir dos pontos comprados e do valor pago. |
-| 3 | Custo por milheiro - Pós-transferência | Aplicar proporção e bônus, mostrar os pontos recebidos e comparar o CPM antes e depois da transferência. |
-| 4 | Análise de emissão de passagem | Comparar o custo real das milhas e taxas com a passagem em dinheiro, mostrando economia em reais e porcentagem. |
-| 5 | Cálculo de emissão | Estimar em reais uma emissão ou promoção: pontos e taxas de ida e de volta, opcionais, com o milheiro de referência do programa. A classe entra no resumo. |
+| 3 | Custo por Milheiro - Transferência | Aplicar proporção e bônus, mostrar os pontos recebidos e comparar o CPM antes e depois da transferência. |
+| 4 | Emissão de passagem | Estimar em reais uma emissão com pontos e taxas. O campo do milheiro começa com a referência do programa e pode ser alterado. Comparar com o valor da passagem com taxas. Ida e volta são opcionais. A classe entra no resumo. |
 
 ## Temas que não viram módulo novo
 

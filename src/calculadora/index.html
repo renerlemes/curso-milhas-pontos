@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <base href="/src/calculadora/">
+  <title>Calculadoras — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="/calculadora/#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">
+        <div class="brand-mark">M&amp;P</div>
+        <div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div>
+      </a>
+      <div class="top-note">Do zero à primeira passagem</div>
+    </div>
+  </header>
+  <div class="layout layout-single">
+    <main id="conteudo">
+      <article class="lesson">
+        <header class="hero">
+          <div class="eyebrow">Calculadoras</div>
+          <h1>Calculadoras</h1>
+          <p class="lead">Contas de custo, transferência e emissão.</p>
+        </header>
+        <div class="body">
+          <section class="section" id="custo-por-milheiro">
+            <div class="kicker">01 · Calculadora</div>
+            <h2>Custo por Milheiro</h2>
+            <p>Descubra quanto você pagou por cada 1.000 pontos.</p>
+            <div class="calculator" data-calculator="purchase">
+              <div class="calculator-fields">
+                <div class="calculator-field">
+                  <label for="cpm-points">Pontos comprados</label>
+                  <input class="calculator-input" id="cpm-points" name="points" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cpm-paid">Valor pago (R$)</label>
+                  <input class="calculator-input" id="cpm-paid" name="paid" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+              </div>
+              <div class="calculator-results" aria-live="polite">
+                <div class="calculator-result">
+                  <span>Custo por milheiro</span>
+                  <output data-output="cpm">—</output>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="pos-transferencia">
+            <div class="kicker">02 · Calculadora</div>
+            <h2>Custo por Milheiro - Transferência</h2>
+            <p>Veja quantos pontos chegam e quanto cada milheiro passa a custar.</p>
+            <div class="calculator" data-calculator="transfer">
+              <div class="calculator-fields">
+                <div class="calculator-field">
+                  <label for="transfer-points">Pontos para transferir</label>
+                  <input class="calculator-input" id="transfer-points" name="points" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="transfer-paid">Valor pago (R$)</label>
+                  <input class="calculator-input" id="transfer-paid" name="paid" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="transfer-bonus">Bônus de transferência (%)</label>
+                  <input class="calculator-input" id="transfer-bonus" name="bonus" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="transfer-ratio">Pontos necessários para 1 milha</label>
+                  <input class="calculator-input" id="transfer-ratio" name="ratio" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+              </div>
+              <div class="calculator-results" aria-live="polite">
+                <div class="calculator-result">
+                  <span>Pontos recebidos</span>
+                  <output data-output="received">—</output>
+                </div>
+                <div class="calculator-result">
+                  <span>CPM antes da transferência</span>
+                  <output data-output="purchase-cpm">—</output>
+                </div>
+                <div class="calculator-result">
+                  <span>CPM pós-transferência</span>
+                  <output data-output="transfer-cpm">—</output>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="emissao-de-passagem">
+            <div class="kicker">03 · Calculadora</div>
+            <h2>Emissão de Passagem</h2>
+            <p>Ida e volta são opcionais. Se a promoção mostra só um trecho, deixe o outro em branco. A classe identifica a emissão. Ao escolher o programa, o valor de referência aparece embaixo dele. O campo ao lado começa com esse valor e é o milheiro da conta. Você pode trocá-lo.</p>
+            <div class="callout warning">
+              <div class="callout-icon">!</div>
+              <div>
+                <strong>Compare a mesma passagem</strong>
+                <p>O milheiro é o teto da faixa verde em <a href="/calculadora/#valores-de-referencia">Valores de referência</a>, referência de outubro de 2026. Não é o preço que você pagou. Taxa em branco não entra na conta. Use a mesma data, bagagem, horário e conexão. Se a economia ficar negativa, pagar em dinheiro é mais barato.</p>
+              </div>
+            </div>
+            <div class="calculator" data-calculator="award">
+              <div class="calculator-fields cols-3">
+                <div class="calculator-field">
+                  <label for="cabin">Classe</label>
+                  <select class="calculator-input" id="cabin" name="cabin">
+                    <option value="">Selecione</option>
+                    <option value="economica" data-medal="../assets/medalhas/bronze.svg">Econômica</option>
+                    <option value="executiva" data-medal="../assets/medalhas/prata.svg">Executiva</option>
+                    <option value="primeira" data-medal="../assets/medalhas/ouro.svg">Primeira Classe</option>
+                  </select>
+                  <p class="field-note is-spacer" aria-hidden="true">Milheiro de referência: <strong>R$ 31,50</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="program">Programa de pontos</label>
+                  <select class="calculator-input" id="program" name="program">
+                    <option value="">Selecione</option>
+                    <option value="avios" data-reference="47" data-logo="../assets/logos/avios.svg">Avios</option>
+                    <option value="azul" data-reference="13" data-logo="../assets/logos/azul.svg">Azul Fidelidade</option>
+                    <option value="esfera" data-reference="31.5" data-logo="../assets/logos/esfera.webp">Esfera</option>
+                    <option value="latam" data-reference="26" data-logo="../assets/logos/latam-pass.svg">LATAM Pass</option>
+                    <option value="livelo" data-reference="30" data-logo="../assets/logos/livelo.svg">Livelo</option>
+                    <option value="smiles" data-reference="16" data-logo="../assets/logos/smiles.svg">Smiles</option>
+                  </select>
+                  <p class="field-note is-blank" data-reference-note>Milheiro de referência: <strong data-output="reference">—</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="reference-rate">Milheiro de referência</label>
+                  <input class="calculator-input" id="reference-rate" name="reference-rate" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="points-out">Ida - Pontos</label>
+                  <input class="calculator-input" id="points-out" name="points-out" type="text" inputmode="numeric" data-mask="integer" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="fees-out">Ida - Taxas</label>
+                  <input class="calculator-input" id="fees-out" name="fees-out" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cash-out">Ida - Valor com taxas</label>
+                  <input class="calculator-input" id="cash-out" name="cash-out" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="points-back">Volta - Pontos</label>
+                  <input class="calculator-input" id="points-back" name="points-back" type="text" inputmode="numeric" data-mask="integer" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="fees-back">Volta - Taxas</label>
+                  <input class="calculator-input" id="fees-back" name="fees-back" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cash-back">Volta - Valor com taxas</label>
+                  <input class="calculator-input" id="cash-back" name="cash-back" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                </div>
+              </div>
+              <div class="award-board" aria-live="polite">
+                <h3 class="result-heading">Passagem</h3>
+                <div class="calculator-results award-results">
+                  <div class="calculator-result pair">
+                    <span>Classe</span>
+                    <img class="result-medal" data-class-medal alt="" hidden>
+                    <p class="calculator-detail" data-summary="class-name"></p>
+                    <output data-output="class-empty">—</output>
+                  </div>
+                  <div class="calculator-result pair">
+                    <span>Programa de pontos</span>
+                    <img class="result-logo" data-program-logo alt="" hidden>
+                    <output data-output="program-empty">—</output>
+                  </div>
+                </div>
+                <h3 class="result-heading">Pontos</h3>
+                <div class="calculator-results award-results">
+                  <div class="calculator-result points">
+                    <span>Ida</span>
+                    <output data-output="outbound">—</output>
+                    <p class="calculator-detail" data-summary="outbound-points"></p>
+                  </div>
+                  <div class="calculator-result points">
+                    <span>Volta</span>
+                    <output data-output="inbound">—</output>
+                    <p class="calculator-detail" data-summary="inbound-points"></p>
+                  </div>
+                  <div class="calculator-result points">
+                    <span>Total</span>
+                    <output data-output="total">—</output>
+                    <p class="calculator-detail" data-summary="detail"></p>
+                  </div>
+                </div>
+                <h3 class="result-heading">Dinheiro</h3>
+                <div class="calculator-results award-results">
+                  <div class="calculator-result">
+                    <span>Ida</span>
+                    <output data-output="cash-outbound">—</output>
+                  </div>
+                  <div class="calculator-result">
+                    <span>Volta</span>
+                    <output data-output="cash-inbound">—</output>
+                  </div>
+                  <div class="calculator-result">
+                    <span>Total</span>
+                    <output data-output="cash">—</output>
+                  </div>
+                </div>
+                <h3 class="result-heading">Comparação</h3>
+                <div class="calculator-results award-results">
+                  <div class="calculator-result">
+                    <span>Ida - Economia</span>
+                    <output data-output="savings-out">—</output>
+                    <p class="calculator-detail" data-summary="savings-note-out"></p>
+                  </div>
+                  <div class="calculator-result">
+                    <span>Ida - Economia em porcentagem</span>
+                    <output data-output="savings-pct-out">—</output>
+                  </div>
+                  <div class="calculator-result choice">
+                    <span>Melhor escolha</span>
+                    <img class="result-choice" data-choice-image="out" data-src-dinheiro="../assets/escolha/dinheiro.svg" data-src-pontos="../assets/escolha/pontos.svg" alt="" hidden>
+                    <p class="calculator-detail" data-summary="choice-out"></p>
+                    <output data-output="choice-out-empty">—</output>
+                  </div>
+                  <div class="calculator-result">
+                    <span>Volta - Economia</span>
+                    <output data-output="savings-back">—</output>
+                    <p class="calculator-detail" data-summary="savings-note-back"></p>
+                  </div>
+                  <div class="calculator-result">
+                    <span>Volta - Economia em porcentagem</span>
+                    <output data-output="savings-pct-back">—</output>
+                  </div>
+                  <div class="calculator-result choice">
+                    <span>Melhor escolha</span>
+                    <img class="result-choice" data-choice-image="back" data-src-dinheiro="../assets/escolha/dinheiro.svg" data-src-pontos="../assets/escolha/pontos.svg" alt="" hidden>
+                    <p class="calculator-detail" data-summary="choice-back"></p>
+                    <output data-output="choice-back-empty">—</output>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="valores-de-referencia">
+            <div class="kicker">04 · Referência</div>
+            <h2>Valores de referência do milheiro</h2>
+            <p>Teto de outubro de 2026. É o valor que a calculadora de emissão preenche ao escolher o programa.</p>
+            <div class="reference-grid">
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/livelo.svg" alt="">Livelo</strong>
+                <p class="muted">Pontos de origem</p>
+                <div class="metric green">Até R$ 30</div>
+              </div>
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/esfera.webp" alt="">Esfera</strong>
+                <p class="muted">Pontos de origem</p>
+                <div class="metric green">Até R$ 31,50</div>
+              </div>
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/azul.svg" alt="">Azul Fidelidade</strong>
+                <p class="muted">Milhas</p>
+                <div class="metric green">Até R$ 13</div>
+              </div>
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/smiles.svg" alt="">Smiles</strong>
+                <p class="muted">Milhas</p>
+                <div class="metric green">Até R$ 16</div>
+              </div>
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/latam-pass.svg" alt="">LATAM Pass</strong>
+                <p class="muted">Milhas</p>
+                <div class="metric green">Até R$ 26</div>
+              </div>
+              <div class="reference-card">
+                <strong><img class="program-logo" height="22" src="../assets/logos/avios.svg" alt="">Avios</strong>
+                <p class="muted">Iberia, British, Finnair e Qatar</p>
+                <div class="metric green">Até R$ 47</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+  </div>
+  <script src="../curso/script-calculadoras.js"></script>
+</body>
+</html>
