@@ -63,6 +63,7 @@
 				.sort((a, b) => a.number - b.number)
 				.map((f) => ({
 					id: `m${mod.number}-a${f.number}`,
+					number: f.number,
 					title: lessonTitle(mod.info, f.number),
 					href: `content/${mod.folder}/${f.file}`,
 				}));
@@ -208,7 +209,7 @@
 				list.appendChild(el("li", "module-empty", "Em breve"));
 			}
 
-			mod.lessons.forEach((lesson, index) => {
+			mod.lessons.forEach((lesson) => {
 				var li = el("li");
 				var link = el("a", "lesson-link");
 				link.href = url(lesson.href);
@@ -217,7 +218,7 @@
 					link.classList.add("active");
 					link.setAttribute("aria-current", "page");
 				}
-				link.appendChild(el("span", "lesson-num", String(index + 1)));
+				link.appendChild(el("span", "lesson-num", String(lesson.number)));
 				link.appendChild(el("span", "lesson-link-label", lesson.title));
 				var check = el("span", "lesson-check", "✓");
 				check.setAttribute("aria-hidden", "true");

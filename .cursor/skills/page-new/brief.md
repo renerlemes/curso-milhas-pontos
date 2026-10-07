@@ -95,7 +95,7 @@ Diferencie claramente:
 
 Uma compra com CPM baixo não garante que uma emissão específica seja vantajosa.
 
-No módulo 6, use dados reais apenas quando puder verificá-los e informar a fonte e a data. Caso contrário, identifique claramente todos os valores como hipotéticos.
+O módulo 6 é só o glossário. Exemplos de emissão ficam no módulo 5.
 
 ## Conteúdos complementares
 

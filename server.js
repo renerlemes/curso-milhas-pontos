@@ -35,8 +35,20 @@ function route(pathname) {
 	return { path };
 }
 
+const NO_CACHE_HEADERS = {
+	"Cache-Control": "no-cache, no-store, must-revalidate",
+	Pragma: "no-cache",
+	Expires: "0",
+};
+
 function asciiHeader(value) {
 	return String(value).replace(/[^\t\x20-\x7e]/g, "_");
+}
+
+function applyNoCache(response) {
+	for (const [name, value] of Object.entries(NO_CACHE_HEADERS)) {
+		response.setHeader(name, value);
+	}
 }
 
 function safeHeaders(response) {
@@ -59,16 +71,22 @@ function safeHeaders(response) {
 				: statusMessage && typeof statusMessage === "object"
 					? statusMessage
 					: null;
-		if (target && typeof target["Content-Disposition"] === "string") {
-			target["Content-Disposition"] = asciiHeader(
-				target["Content-Disposition"],
-			);
+		if (target) {
+			if (typeof target["Content-Disposition"] === "string") {
+				target["Content-Disposition"] = asciiHeader(
+					target["Content-Disposition"],
+				);
+			}
+			Object.assign(target, NO_CACHE_HEADERS);
 		}
 		return writeHead.call(response, statusCode, statusMessage, headers);
 	};
 }
 
 const server = http.createServer((request, response) => {
+	safeHeaders(response);
+	applyNoCache(response);
+
 	const url = new URL(request.url, "http://127.0.0.1");
 	const mapped = route(url.pathname);
 
@@ -85,7 +103,6 @@ const server = http.createServer((request, response) => {
 	}
 
 	request.url = encodeURI(mapped.path) + url.search;
-	safeHeaders(response);
 	return handler(request, response, config).catch((err) => {
 		console.error(err);
 		if (!response.headersSent) {

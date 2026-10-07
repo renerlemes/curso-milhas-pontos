@@ -6,8 +6,7 @@
 			"descricao": "O que são milhas e pontos, como o caminho até a passagem funciona e quando essa estratégia ajuda a viajar gastando menos.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Introdução aos Pontos e Milhas" },
-				{ "numero": 2, "titulo": "Acumular, Transferir e Resgatar" },
-				{ "numero": 3, "titulo": "A Estratégia para Viajar Gastando Menos" }
+				{ "numero": 2, "titulo": "Acumular, Transferir e Resgatar" }
 			]
 		},
 		{
@@ -17,7 +16,7 @@
 			"aulas": [
 				{ "numero": 1, "titulo": "Livelo e Esfera" },
 				{ "numero": 2, "titulo": "Azul Fidelidade, Smiles e LATAM Pass" },
-				{ "numero": 3, "titulo": "Iberia Club e Avios" },
+				{ "numero": 3, "titulo": "Avios" },
 				{ "numero": 4, "titulo": "Accor" },
 				{ "numero": 5, "titulo": "Cadastros" },
 				{ "numero": 6, "titulo": "Transferências" },
@@ -50,7 +49,7 @@
 		{
 			"numero": 5,
 			"titulo": "Como Encontrar e Avaliar Emissões",
-			"descricao": "Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica e comparar dinheiro com milhas e taxas.",
+			"descricao": "Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar dinheiro com milhas e taxas e ver a mesma conta num hotel.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Pesquisar Rotas" },
 				{ "numero": 2, "titulo": "Pesquisar no Programa" },
@@ -58,20 +57,16 @@
 				{ "numero": 4, "titulo": "Pesquisar em Grupos de WhatsApp" },
 				{ "numero": 5, "titulo": "Tabela Fixa e Tabela Dinâmica" },
 				{ "numero": 6, "titulo": "Dinheiro, Milhas e Taxas" },
-				{ "numero": 7, "titulo": "Comparações" }
+				{ "numero": 7, "titulo": "Quatro passagens, quatro valores" },
+				{ "numero": 8, "titulo": "Pontos viram hospedagem" }
 			]
 		},
 		{
 			"numero": 6,
-			"titulo": "Caso Prático e Checklist Final",
-			"descricao": "Uma decisão completa, da necessidade de viagem à emissão, com checklist, glossário e um caso de hotel.",
+			"titulo": "Extras",
+			"descricao": "O glossário do curso: o que cada palavra quer dizer.",
 			"aulas": [
-				{ "numero": 1, "titulo": "Da Necessidade à Passagem em Dinheiro" },
-				{ "numero": 2, "titulo": "Disponibilidade e Comparação" },
-				{ "numero": 3, "titulo": "Custos, Regras e Riscos" },
-				{ "numero": 4, "titulo": "Decisão e Checklist Final" },
-				{ "numero": 5, "titulo": "Glossário" },
-				{ "numero": 6, "titulo": "Caso das Maldivas" }
+				{ "numero": 1, "titulo": "Glossário" }
 			]
 		},
 		{
@@ -80,8 +75,8 @@
 			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus e o valor de uma emissão, comparado com a passagem em dinheiro.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Valores de Referência do Milheiro" },
-				{ "numero": 2, "titulo": "Custo por Milheiro" },
-				{ "numero": 3, "titulo": "Custo por Milheiro - Transferência" },
+				{ "numero": 2, "titulo": "Custo Por Milheiro" },
+				{ "numero": 3, "titulo": "Custo Por Milheiro - Transferência" },
 				{ "numero": 4, "titulo": "Emissão de Passagem" }
 			]
 		}
