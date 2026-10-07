@@ -64,13 +64,14 @@
 		{
 			"numero": 6,
 			"titulo": "Caso Prático e Checklist Final",
-			"descricao": "Uma decisão completa, da necessidade de viagem à emissão, com checklist e glossário.",
+			"descricao": "Uma decisão completa, da necessidade de viagem à emissão, com checklist, glossário e um caso de hotel.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Da Necessidade à Passagem em Dinheiro" },
 				{ "numero": 2, "titulo": "Disponibilidade e Comparação" },
 				{ "numero": 3, "titulo": "Custos, Regras e Riscos" },
 				{ "numero": 4, "titulo": "Decisão e Checklist Final" },
-				{ "numero": 5, "titulo": "Glossário" }
+				{ "numero": 5, "titulo": "Glossário" },
+				{ "numero": 6, "titulo": "Caso das Maldivas" }
 			]
 		},
 		{

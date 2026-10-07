@@ -29,12 +29,12 @@ Saber onde os pontos ficam, para onde podem ir e o que conferir.
 | 1 | Livelo e Esfera | O que são, usar no programa ou transferir, e que para participar basta o cadastro gratuito; planos pagos são opcionais. Sem o clube, os pontos normalmente expiram. |
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada programa, os planos pagos, que o mesmo voo custa milhas diferentes em cada um e que milhas não passam de um programa para outro sozinhas. Viaje Fácil da Smiles: reservar com taxa de R$ 249,90 e quitar as milhas até 60 dias antes do primeiro voo. |
 | 3 | Iberia Club e Avios | Quem usa Avios (Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair), quando transferir pode compensar e que o caminho precisa existir. |
-| 4 | Accor | Mostrar que 1.000 Pontos Reward valem € 20 de desconto na rede ALL e um exemplo ilustrativo: Esfera → Azul → Accor para cinco noites nas Maldivas, de R$ 13.361,17 para R$ 7.870,82. |
+| 4 | Accor | Mostrar que 1.000 Pontos Reward valem € 20 de desconto na rede ALL, que a conta precisa existir antes de transferir e que esse valor nem sempre compensa. O exemplo numérico está na aula 6.6. |
 | 5 | Cadastros | Usar o mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
 | 6 | Transferências | Quatro perguntas: dá para transferir, quanto chega, quando vence e posso participar da promoção. Transferência em geral não volta. |
 | 7 | Usando os pontos | Comparar o valor dos pontos numa troca e numa compra que acumula. Fritadeira Oster OFRT660: 34.920 pontos contra R$ 299,90 (R$ 8,59 por 1.000, custo de R$ 35). Tênis Corre 5: compra direta R$ 599,99 ou pelo link Livelo, com cerca de 6.000 pontos estimados em R$ 198 e custo efetivo R$ 401,93. Smart TV TCL 65": compra direta R$ 4.179,05 ou pelo link Esfera a R$ 4.399,00, com 21.995 pontos estimados em R$ 769,83 e custo efetivo R$ 3.629,17. |
 
-Programas nomeados no curso: Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass, Iberia Club, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair e Avios. Não afirmar que todos são parceiros diretos entre si.
+Programas nomeados no curso: Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass, Iberia Club, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair, Avios e Accor (ALL). Não afirmar que todos são parceiros diretos entre si.
 
 ## Módulo 3 — Como acumular e comprar pontos baratos
 
@@ -45,7 +45,7 @@ Calcular custo e comparar formas de obter pontos.
 | 1 | Formas de acumular | De onde os pontos vêm, o que entra no custo e a diferença entre gasto que já existia e gasto feito só para ganhar pontos. |
 | 2 | Como calcular o CPM | Aplicar a fórmula e ler o número: comparar só contas iguais, sem bônus que ainda não chegou. CPM baixo não torna a passagem boa. |
 | 3 | Comprar sem estratégia de uso | Mostrar o risco de comprar pontos sem viagem ou resgate em vista, incluindo custo de oportunidade do dinheiro. |
-| 4 | Valores de referência do milheiro | Mostrar, em faixas visuais e com data, valores-alvo aproximados para Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. |
+| 4 | Valores de referência do milheiro | Ensinar verde, amarelo e vermelho junto com as faixas de Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. Faixa verde não dispensa o CPM nem a passagem. A mesma tabela, com data e fontes, está na aula 7.1. |
 
 ## Módulo 4 — Como transferir com bônus
 
@@ -75,7 +75,7 @@ Achar a passagem e verificar se compensa.
 
 ## Módulo 6 — Caso prático e checklist final
 
-Uma decisão completa. As cinco aulas seguem o mesmo exemplo inventado: 100.000 pontos por R$ 1.500, transferência 1:1 com bônus de 100% (200.000 milhas, CPM R$ 7,50) e passagem parecida de R$ 2.600. Não é oferta vigente.
+Uma decisão completa. As aulas 1 a 4 seguem o mesmo exemplo inventado: 100.000 pontos por R$ 1.500, transferência 1:1 com bônus de 100% (200.000 milhas, CPM R$ 7,50) e passagem parecida de R$ 2.600. Não é oferta vigente. A aula 6 é outro caso, de hotel.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
@@ -84,6 +84,7 @@ Uma decisão completa. As cinco aulas seguem o mesmo exemplo inventado: 100.000 
 | 3 | Custos, regras e riscos | CPM, custo total da emissão com taxas, elegibilidade, irreversibilidade e assento que pode sumir. |
 | 4 | Decisão e checklist final | Decidir com critério e deixar o checklist reutilizável: custo, saldo, validade, origem, regras da promoção, passagem equivalente. |
 | 5 | Glossário | Definir CPM, milheiro, bônus, transferência, emissão, resgate, tabela fixa, tabela dinâmica e Avios. |
+| 6 | Caso das Maldivas | Aplicar a regra da Accor (aula 2.4) num hotel: Esfera 290.000 por R$ 7.709,65, Azul 638.000 com 120%, ALL 110.500 Reward a 7,5 para 1 com 30%. Dinheiro R$ 13.361,17 contra custo da estratégia R$ 7.870,82. Os Reward valem € 2.210 (R$ 13.260 a R$ 6); isso é o desconto, não o preço pago. Os R$ 161,17 entre a compra e o custo da estratégia não estão detalhados. |
 
 ## Módulo 7 — Cálculos
 
@@ -91,11 +92,11 @@ Calculadoras editáveis com resultado atualizado em tempo real.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Valores de referência do milheiro | Mostrar as mesmas faixas da aula 3.4: verde, amarelo e vermelho para Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. |
+| 1 | Valores de referência do milheiro | Tabela de outubro de 2026, com fontes, para Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass e Avios. Verde, amarelo e vermelho. O critério de leitura está na aula 3.4. |
 | 2 | Custo por milheiro | Calcular o CPM a partir dos pontos comprados e do valor pago. |
 | 3 | Custo por Milheiro - Transferência | Aplicar proporção e bônus, mostrar os pontos recebidos e comparar o CPM antes e depois da transferência. |
 | 4 | Emissão de passagem | Estimar em reais uma emissão com pontos e taxas. O campo do milheiro começa com a referência do programa e pode ser alterado. Comparar com o valor da passagem com taxas. Ida e volta são opcionais. A classe entra no resumo. |
 
 ## Temas que não viram módulo novo
 
-Validade e expiração, transferência irreversível, disponibilidade instável, regras de clube, taxas, custo de oportunidade, compra sem resgate, passagem equivalente, registro de saldo e checklist de promoção entram nas aulas 2.5, 3.3, 4.2, 5.6 e 6.3–6.5. Não repita esses temas num módulo extra.
+Validade e expiração, transferência irreversível, disponibilidade instável, regras de clube, taxas, custo de oportunidade, compra sem resgate, passagem equivalente, registro de saldo e checklist de promoção entram nas aulas 2.5, 2.6, 3.3, 4.2, 5.6 e 6.3–6.5. Não repita esses temas num módulo extra.
