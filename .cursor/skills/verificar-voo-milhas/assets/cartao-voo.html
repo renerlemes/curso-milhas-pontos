@@ -26,38 +26,60 @@
 
 		#resultado-voo .header {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
+			justify-content: space-between;
 			gap: 12px;
 		}
 
-		#resultado-voo .badge {
-			flex: 0 0 auto;
-			width: 28px;
+		#resultado-voo .brand {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			min-width: 0;
+		}
+
+		#resultado-voo .logo,
+		#resultado-voo .program {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+
+		#resultado-voo .logo svg {
+			display: block;
 			height: 28px;
-			border-radius: 8px;
-			background: #111;
-			color: #fff;
-			display: grid;
-			place-items: center;
-			font-size: 13px;
-			font-weight: 700;
-			line-height: 1;
+			width: auto;
+		}
+
+		#resultado-voo .program svg {
+			display: block;
+			height: 22px;
+			width: auto;
 		}
 
 		#resultado-voo .airline h2 {
 			margin: 0;
 			color: var(--ink);
 			font-size: 18px;
-			font-weight: 750;
-			letter-spacing: -0.03em;
+			font-weight: 650;
+			letter-spacing: -0.02em;
 			line-height: 1.2;
+		}
+
+		#resultado-voo .program {
+			flex: 0 0 auto;
+			margin: 2px 0 0;
+			color: var(--ink);
+			font-size: 16px;
+			font-weight: 650;
+			white-space: nowrap;
 		}
 
 		#resultado-voo .airline p,
 		#resultado-voo .fare,
 		#resultado-voo .kicker,
 		#resultado-voo .detail,
-		#resultado-voo .disclaimer p {
+		#resultado-voo .notes p {
 			margin: 0;
 			color: var(--muted);
 			font-size: 14px;
@@ -72,7 +94,7 @@
 			margin: 22px 0 0;
 			color: var(--ink);
 			font-size: 17px;
-			font-weight: 500;
+			font-weight: 650;
 			line-height: 1.35;
 		}
 
@@ -81,8 +103,8 @@
 			justify-content: space-between;
 			margin-top: 18px;
 			font-size: 28px;
-			font-weight: 500;
-			letter-spacing: -0.03em;
+			font-weight: 400;
+			letter-spacing: -0.02em;
 			line-height: 1;
 		}
 
@@ -112,7 +134,7 @@
 			font-weight: 500;
 		}
 
-		#resultado-voo .airports span:nth-child(3) {
+		#resultado-voo .airports span:last-child {
 			text-align: right;
 		}
 
@@ -166,8 +188,46 @@
 			letter-spacing: -0.02em;
 		}
 
-		#resultado-voo .disclaimer p + p {
+		#resultado-voo .footer {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) 160px;
+			gap: 20px;
+		}
+
+		#resultado-voo .footer.single {
+			grid-template-columns: 1fr;
+		}
+
+		#resultado-voo .notes p + p {
 			margin-top: 8px;
+		}
+
+		#resultado-voo .dates {
+			border-left: 1px solid var(--line);
+			padding-left: 20px;
+		}
+
+		#resultado-voo .dates h3 {
+			margin: 0 0 12px;
+			color: var(--muted);
+			font-size: 13px;
+			font-weight: 400;
+		}
+
+		#resultado-voo .dates dl {
+			margin: 0;
+		}
+
+		#resultado-voo .dates dt {
+			color: var(--ink);
+			font-size: 14px;
+			font-weight: 650;
+		}
+
+		#resultado-voo .dates dd {
+			margin: 2px 0 14px;
+			color: #4a4a4a;
+			font-size: 12px;
 		}
 
 		@media (max-width: 560px) {
@@ -179,19 +239,29 @@
 				font-size: 24px;
 			}
 
-			#resultado-voo .prices {
+			#resultado-voo .prices,
+			#resultado-voo .footer {
 				grid-template-columns: 1fr;
+			}
+
+			#resultado-voo .dates {
+				border-left: 0;
+				border-top: 1px solid var(--line);
+				padding: 16px 0 0;
 			}
 		}
 	</style>
 
 	<section class="flight">
 		<header class="header">
-			<div class="badge" aria-hidden="true">{{NUMERO}}</div>
-			<div class="airline">
-				<h2>{{COMPANHIA}}</h2>
-				<p>{{ESCALAS}}, {{DURACAO}}</p>
+			<div class="brand">
+				<span class="logo">{{LOGO_COMPANHIA}}</span>
+				<div class="airline">
+					<h2>{{COMPANHIA}}</h2>
+					<p>{{ESCALAS}}, {{DURACAO}}</p>
+				</div>
 			</div>
+			<p class="program">{{LOGO_PROGRAMA}}</p>
 		</header>
 
 		<p class="cities">{{CIDADE_ORIGEM}} → {{CIDADE_ESCALA}} → {{CIDADE_DESTINO}}</p>
@@ -202,6 +272,7 @@
 		</div>
 
 		<div class="route">
+			<!-- Com escala -->
 			<svg viewBox="0 0 504 64" role="img" aria-label="{{ORIGEM}}, escala em {{ESCALA}}, destino {{DESTINO}}">
 				<path d="M10 52 Q 252 -20 494 52" fill="none" stroke="#b5b5b5" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
 				<circle cx="10" cy="52" r="5" fill="#3a3a3a"/>
@@ -213,9 +284,21 @@
 				<span>{{ESCALA}} {{TEMPO_CONEXAO}}</span>
 				<span>{{DESTINO}}</span>
 			</div>
+			<!-- Voo direto: troque o svg e o .airports acima por estes
+			<svg viewBox="0 0 504 64" role="img" aria-label="{{ORIGEM}}, voo direto, destino {{DESTINO}}">
+				<path d="M10 52 Q 252 -20 494 52" fill="none" stroke="#b5b5b5" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
+				<circle cx="10" cy="52" r="5" fill="#3a3a3a"/>
+				<circle cx="494" cy="52" r="5" fill="#3a3a3a"/>
+			</svg>
+			<div class="airports">
+				<span>{{ORIGEM}}</span>
+				<span></span>
+				<span>{{DESTINO}}</span>
+			</div>
+			-->
 		</div>
 
-		<p class="fare">{{TARIFA}} · {{BAGAGEM}} · {{ESCOPO}}</p>
+		<p class="fare">{{CABINE}} · {{PASSAGEIROS}}</p>
 	</section>
 
 	<hr>
@@ -238,9 +321,18 @@
 
 	<hr>
 
-	<div class="disclaimer">
-		<p>{{AVISO_ESTIMATIVA}}</p>
-		<p>{{AVISO_MILHEIRO}}</p>
-		<p>{{AVISO_PRECO_DINHEIRO}}</p>
+	<!-- Sem várias datas: use class="footer single" e remova o <aside class="dates"> -->
+	<div class="footer">
+		<div class="notes">
+			<p>{{AVISO}}</p>
+			<p>{{AVISO}}</p>
+		</div>
+		<aside class="dates" aria-label="Outras datas">
+			<h3>Outras datas</h3>
+			<dl>
+				<dt>{{MES_ANO}}</dt>
+				<dd>{{DIAS}}</dd>
+			</dl>
+		</aside>
 	</div>
 </div>

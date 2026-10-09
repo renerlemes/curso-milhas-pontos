@@ -154,20 +154,36 @@ Mostre o cartão no chat como visualização HTML. Siga o ciclo de publicação 
 
 Cada itinerário é um `<section class="flight">`, nesta ordem:
 
-1. Número e companhia. Abaixo do nome: escalas e duração total. Sem preço no topo.
+1. Logo da companhia à esquerda do nome e, abaixo do nome, escalas e duração total. Logo do programa de pontos no canto superior direito. Sem número e sem preço no topo.
 2. Cidades da origem, da escala e do destino, numa linha própria: `Goiânia → São Paulo → Curitiba`.
-3. Horário de saída e de chegada, com AM/PM: `6:10 AM` e `10:20 AM`.
-4. Rota: código da origem, escala com o tempo de conexão e código do destino. Voo direto não ganha escala inventada: tire a bolinha do meio, a cidade da escala e o texto central.
-5. Tarifa, bagagem e se é só ida ou ida e volta.
+3. Horário de saída e de chegada, em 24 horas: `18:15` e `06:50`. Chegada no dia seguinte ganha `+1`.
+4. Rota: código da origem, escala com o tempo de conexão e código do destino. Voo direto não ganha escala inventada: use a variante de voo direto do modelo, sem a bolinha do meio, a cidade da escala e o texto central.
+5. Cabine, passageiros e, quando houver, tarifa, bagagem e se é só ida ou ida e volta.
 
-Mostre até cinco itinerários, do menor preço ao maior, separados pela linha do próprio `.flight + .flight`. Não desenhe logo de companhia. Se faltar horário, bagagem, tarifa ou conexão, escreva “não confirmado” nesse campo.
+Mostre até cinco itinerários, do menor preço ao maior, separados pela linha do próprio `.flight + .flight`. Se faltar horário, bagagem, tarifa ou conexão, escreva “não confirmado” nesse campo.
+
+Cole a logo inline, copiando o SVG de `assets/logos/`. Não use endereço externo nem invente outra marca.
+
+| Quem | Arquivo | No cartão |
+|---|---|---|
+| GOL | `companhias/gol.svg` | símbolo à esquerda do nome |
+| LATAM | `companhias/latam.svg` | símbolo à esquerda do nome |
+| Azul | `companhias/azul.svg` | símbolo à esquerda do nome |
+| South African Airways | `companhias/saa.svg` | símbolo à esquerda do nome |
+| Smiles | `programas/smiles.svg` | wordmark no lugar do nome |
+| Livelo | `programas/livelo.svg` | wordmark no lugar do nome |
+| LATAM Pass | `programas/latam-pass.svg` | símbolo e, ao lado, o nome |
+| Azul Fidelidade | `programas/azul-fidelidade.svg` | símbolo e, ao lado, o nome |
+| Esfera | `programas/esfera.svg` | símbolo e, ao lado, o nome |
+
+Sem arquivo para aquela companhia ou programa, mostre só o nome.
 
 Depois dos voos vem a comparação, uma vez, para o itinerário da emissão:
 
 - Em dinheiro: preço em reais e, abaixo, de onde veio. Se a fonte estiver em outra moeda, converta pela cotação comercial do dia e escreva a taxa usada (`Estimativa a partir de US$ 414`). Esse valor é estimativa, não a tarifa cobrada no Brasil.
 - Em pontos / milhas: custo total da emissão, milhas mais taxas e o custo do milheiro usado.
-- Linha de economia: `≈ R$ 390 mais barato em milhas` ou `≈ R$ 120 mais caro em milhas`. Sem preço em dinheiro, escreva “Economia não calculada”.
-- Avisos: se é estimativa, a referência e a data do milheiro e se o preço em dinheiro foi confirmado na companhia.
+- Linha de economia: `≈ R$ 390 mais barato em milhas` ou `≈ R$ 120 mais caro em milhas`. Se a disponibilidade ou o preço em dinheiro não foram confirmados, use `≈ R$ 3.879 de diferença entre referências`. Sem preço em dinheiro, escreva “Economia não calculada”.
+- Rodapé em duas colunas. À esquerda, mais larga, os avisos: se é estimativa, de onde veio cada preço, a cotação usada, a referência e a data do milheiro e o que falta confirmar. À direita, mais estreita, “Outras datas”: mês e ano em negrito e os dias abaixo, separados por `·`, para cada mês que a imagem ou a busca mostrar. Com uma data só, ou nenhuma, use `footer single` e tire a coluna da direita.
 
 Todos os números da comparação saem do script. Campo sem dado fica “não confirmado”.
 
