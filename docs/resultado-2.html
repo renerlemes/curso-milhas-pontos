@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GOL · Goiânia → Curitiba</title>
+	<style>
+		:root {
+			--ink: #1c1c1c;
+			--muted: #8a8a8a;
+			--line: #e6e6e6;
+			--sage: #629284;
+			--dot: #3a3a3a;
+			--arc: #b5b5b5;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			background: #fff;
+			color: var(--ink);
+			font-family: "Segoe UI", system-ui, sans-serif;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.card {
+			width: min(560px, 100%);
+			margin: 0 auto;
+			padding: 28px 28px 36px;
+		}
+
+		.header {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+
+		.badge {
+			flex: 0 0 auto;
+			width: 28px;
+			height: 28px;
+			border-radius: 8px;
+			background: #111;
+			color: #fff;
+			display: grid;
+			place-items: center;
+			font-size: 13px;
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		.mark-gol {
+			flex: 0 0 auto;
+			color: #ff6a00;
+			font-size: 15px;
+			font-weight: 800;
+			letter-spacing: -0.04em;
+			line-height: 1;
+		}
+
+		.airline {
+			min-width: 0;
+		}
+
+		.airline h2 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: 750;
+			letter-spacing: -0.03em;
+			line-height: 1.2;
+		}
+
+		.airline p,
+		.fare,
+		.kicker,
+		.detail,
+		.disclaimer {
+			margin: 0;
+			color: var(--muted);
+			font-size: 14px;
+			line-height: 1.35;
+		}
+
+		.airline p {
+			margin-top: 2px;
+		}
+
+		.cities {
+			margin: 22px 0 0;
+			color: var(--ink);
+			font-size: 17px;
+			font-weight: 500;
+			line-height: 1.35;
+		}
+
+		.times {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 18px;
+			font-size: 28px;
+			font-weight: 500;
+			letter-spacing: -0.03em;
+			line-height: 1;
+		}
+
+		.route {
+			margin-top: 6px;
+		}
+
+		.route svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.airports {
+			display: grid;
+			grid-template-columns: 1fr auto 1fr;
+			align-items: start;
+			margin-top: 2px;
+			color: #4a4a4a;
+			font-size: 14px;
+			font-weight: 650;
+			letter-spacing: -0.02em;
+		}
+
+		.airports span:nth-child(2) {
+			text-align: center;
+			font-weight: 500;
+		}
+
+		.airports span:nth-child(3) {
+			text-align: right;
+		}
+
+		.fare {
+			margin-top: 14px;
+			font-size: 15px;
+		}
+
+		hr {
+			border: 0;
+			border-top: 1px solid var(--line);
+			margin: 24px 0;
+		}
+
+		.prices {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		.amount {
+			margin: 10px 0 0;
+			color: var(--sage);
+			font-size: 26px;
+			font-weight: 750;
+			letter-spacing: -0.035em;
+			line-height: 1.1;
+		}
+
+		.amount.miles {
+			color: var(--sage);
+			font-weight: 650;
+		}
+
+		.detail {
+			margin-top: 10px;
+		}
+
+		.detail.strong {
+			color: var(--ink);
+		}
+
+		.detail + .detail {
+			margin-top: 4px;
+		}
+
+		.saving {
+			margin: 24px 0 0;
+			color: var(--sage);
+			font-size: 18px;
+			font-weight: 650;
+			letter-spacing: -0.02em;
+		}
+
+		.disclaimer p {
+			margin: 0;
+		}
+
+		.disclaimer p + p {
+			margin-top: 8px;
+		}
+
+		@media (max-width: 560px) {
+			.card {
+				padding: 20px 16px 28px;
+			}
+
+			.times {
+				font-size: 24px;
+			}
+
+			.prices {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<article class="card">
+		<header class="header">
+			<div class="badge" aria-hidden="true">1</div>
+			<span class="mark-gol" aria-hidden="true">GOL</span>
+			<div class="airline">
+				<h2>GOL</h2>
+				<p>1 escala, 4h 10min</p>
+			</div>
+		</header>
+
+		<p class="cities">Goiânia → São Paulo → Curitiba</p>
+
+		<div class="times">
+			<span>6:10 AM</span>
+			<span>10:20 AM</span>
+		</div>
+
+		<div class="route">
+			<svg viewBox="0 0 504 64" role="img" aria-label="GYN, escala em GRU, destino CWB">
+				<path d="M10 52 Q 252 -20 494 52" fill="none" stroke="#b5b5b5" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.1 6"/>
+				<circle cx="10" cy="52" r="5" fill="#3a3a3a"/>
+				<circle cx="494" cy="52" r="5" fill="#3a3a3a"/>
+				<circle cx="252" cy="16" r="5" fill="#fff" stroke="#3a3a3a" stroke-width="1.6"/>
+			</svg>
+			<div class="airports">
+				<span>GYN</span>
+				<span>GRU 1h 10min</span>
+				<span>CWB</span>
+			</div>
+		</div>
+
+		<p class="fare">GOL Light · Só bagagem de mão · Só ida</p>
+
+		<hr>
+
+		<div class="prices">
+			<section>
+				<p class="kicker">Em dinheiro</p>
+				<p class="amount">≈ R$&nbsp;2.110</p>
+				<p class="detail">Estimativa a partir de US$&nbsp;414</p>
+			</section>
+			<section>
+				<p class="kicker">Em pontos / milhas</p>
+				<p class="amount miles">≈ R$&nbsp;1.720</p>
+				<p class="detail strong">63.867 milhas + R$&nbsp;104,52</p>
+				<p class="detail">R$&nbsp;25,29 por milheiro</p>
+			</section>
+		</div>
+
+		<p class="saving">≈ R$&nbsp;390 mais barato em milhas</p>
+
+		<hr>
+
+		<div class="disclaimer">
+			<p>Estimativa proporcional, não é cotação de compra.</p>
+			<p>Milheiro de mercado: referência de 02/10/2026, Balcão de Milhas. Compra pode ter taxa ou margem.</p>
+			<p>Preço em dinheiro estimado, não confirmado na LATAM.</p>
+		</div>
+	</article>
+</body>
+</html>

@@ -120,11 +120,21 @@ summary:focus-visible {
 	text-transform: uppercase;
 }
 .top-note {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 2px;
 	font-size: 0.85rem;
 	color: var(--muted);
 	font-weight: 400;
+	text-align: right;
 }
-
+.top-exit {
+	font-size: 0.78rem;
+	color: var(--blue);
+	font-weight: 500;
+	text-decoration: none;
+}
 /* Layout */
 .layout {
 	max-width: var(--width);
@@ -1077,7 +1087,7 @@ details[open] summary {
 	.topbar-inner {
 		padding: 12px 16px;
 	}
-	.top-note {
+	.top-note span {
 		display: none;
 	}
 }

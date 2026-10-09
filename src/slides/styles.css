@@ -716,6 +716,16 @@ body {
 	color: #94a3b8;
 }
 
+.slide.cover-course .slide-exit {
+	position: absolute;
+	right: 64px;
+	bottom: 48px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .course-title {
 	display: flex;
 	flex-direction: column;

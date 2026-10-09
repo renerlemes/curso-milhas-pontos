@@ -178,7 +178,7 @@
 
 		course.modules.forEach((mod, idx) => {
 			var isCurrent = current && current.module.id === mod.id;
-			var startOpen = current ? isCurrent : idx === 0;
+			var startOpen = false;
 
 			var wrap = el(
 				"div",
