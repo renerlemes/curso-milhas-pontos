@@ -18,10 +18,11 @@ Leia [references/fontes-confiaveis.md](references/fontes-confiaveis.md) antes de
 ## Fluxo
 
 1. Extrair a imagem.
-2. Verificar a oferta no programa da emissão.
-3. Buscar a tarifa em dinheiro da mesma viagem.
-4. Calcular.
-5. Responder no formato fixo.
+2. Buscar a tarifa em reais no Fli.
+3. Calcular.
+4. Responder só com o cartão HTML.
+
+Não abra o site do programa nem o da companhia. Não confira disponibilidade de milhas no navegador. A resposta é o cartão e nada além dele.
 
 ## Extrair a imagem
 
@@ -52,19 +53,9 @@ Separe quem opera o voo de quem emite o prêmio. Preço em AAdvantage não confi
 
 ## Verificar a oferta
 
-Siga esta ordem:
+Não consulte o site do programa nem o da companhia. As milhas e as taxas ficam como extraídas da imagem. A disponibilidade do prêmio não é verificada.
 
-1. Buscar disponibilidade para a rota e a data exata.
-2. Confirmar se a cabine e a companhia correspondem à imagem.
-3. Conferir milhas exigidas, taxas e restrições.
-4. Registrar a fonte, o horário da consulta e a URL.
-5. Se não for possível confirmar, declarar explicitamente que a disponibilidade não foi verificada.
-
-Data exata ausente: busque o mês indicado e não escolha um dia. Dois meses são duas consultas, não um par ida e volta, salvo se a imagem disser isso.
-
-Não há MCP de disponibilidade de milhas configurado. Confira o prêmio no site oficial do programa da emissão. Preço de outro programa, inclusive AAdvantage, não confirma o preço Smiles do mesmo avião.
-
-Use o navegador integrado só em página pública do programa ou da companhia. Pare em login, CAPTCHA ou bloqueio. Não crie conta e não peça senha. Uma página aberta não é reserva garantida.
+Data exata ausente: busque no Fli o mês indicado e não escolha um dia. Dois meses são duas consultas, não um par ida e volta, salvo se a imagem disser isso.
 
 Diferencie:
 
@@ -86,13 +77,9 @@ Mapeie para o status da resposta:
 
 Busque o preço em dinheiro para a mesma rota, datas, cabine e quantidade de passageiros.
 
-Priorize:
+A tarifa em reais sai só do Fli, com BRL, pt-BR e país BR. Não confirme no site da companhia e não use outro comparador.
 
-1. MCP Fli (`search_flights` para data exata ou `search_dates` para intervalo), com BRL, pt-BR e país BR.
-2. Site oficial da companhia aérea para confirmar o preço encontrado.
-3. Outro comparador confiável, quando necessário.
-
-O Fli consulta tarifas em dinheiro no Google Flights. Ele não consulta milhas nem confirma disponibilidade Smiles. Identifique seu resultado como fonte secundária e registre a data pesquisada, companhia, escalas e URL ou ferramenta. Se o MCP Fli não estiver carregado após editar `.cursor/mcp.json`, peça para recarregar a janela do Cursor e não volte à automação lenta do navegador para dezenas de datas.
+O Fli consulta tarifas em dinheiro no Google Flights. Ele não consulta milhas. Identifique o resultado como fonte secundária no aviso do cartão, com a data pesquisada, a companhia e as escalas. Se o MCP Fli não estiver carregado, rode o mesmo Fli pela linha de comando, com o `uv` e o pacote de `.cursor/mcp.json`: `uv tool run --from "flights @ git+https://github.com/punitarani/fli.git@<commit>" fli flights GRU CPT 2027-06-05 --airlines SA --currency BRL --language pt-BR --country BR --format json`. Consulte um dia de cada mês da imagem. Não abra o navegador.
 
 Não compare tarifas diferentes sem informar a diferença. Considere bagagem, flexibilidade, escalas, duração do voo e condições tarifárias quando disponíveis.
 
@@ -100,7 +87,7 @@ Se não for possível obter a tarifa exata, apresente a limitação e não inven
 
 ## Cálculo
 
-Execute o script a partir da pasta da skill, com Python 3 (`python` ou, no Windows, `py -3`). Converta milhas para inteiro (`52900`) e dinheiro para `318.27` ou `318,27` antes de chamar. Se o interpretador não existir, diga isso na resposta. Não apresente conta manual como se fosse a saída do script.
+Execute o script a partir da pasta da skill, com Python 3. Neste Windows, `python` é só o atalho da Microsoft Store: use `C:\Users\Rener\.platformio\python3\python.exe`. Converta milhas para inteiro (`52900`) e dinheiro para `318.27` ou `318,27` antes de chamar. Se o interpretador não existir, diga isso na resposta. Não apresente conta manual como se fosse a saída do script.
 
 ```bash
 python scripts/calcular-emissao.py --milhas 52900 --milhas-max 57700 --taxas 318.27 --cenario preco-alvo=16 --cenario faixa-alta=18
@@ -148,6 +135,10 @@ Veredito `Vale a pena` exige disponibilidade confirmada no programa, tarifa em d
 
 ## Formato da resposta
 
+Monte o cartão só depois de ter o preço em reais do Fli e a saída do script. As milhas e as taxas vêm da imagem. O custo do milheiro vem de [references/referencias-milheiro.md](references/referencias-milheiro.md): o preço-alvo vai no cartão e o topo da faixa vai nos avisos.
+
+A resposta é só o cartão. Não escreva o relatório, o veredito nem o próximo passo fora do HTML.
+
 Comece pelo cartão do resultado, em HTML, no layout de [assets/cartao-voo.html](assets/cartao-voo.html). O exemplo preenchido está em `docs/resultado-2.html` na raiz do projeto.
 
 Mostre o cartão no chat como visualização HTML. Siga o ciclo de publicação da skill `visualize` (gravar o fragmento em `visualizations/` do store do agente e emitir a tag `cursor-content`). Copie o modelo, troque cada `{{CAMPO}}` e não mude o estilo. Sem store disponível, grave o arquivo em `docs/` e informe o caminho.
@@ -187,7 +178,7 @@ Depois dos voos vem a comparação, uma vez, para o itinerário da emissão:
 
 Todos os números da comparação saem do script. Campo sem dado fica “não confirmado”.
 
-Depois do cartão, use o relatório abaixo. Com intervalo de milhas ou mais de um cenário, repita a tabela, uma por limite e por cenário. Não colapse mínimo e máximo numa linha só.
+Não repita a comparação fora do cartão. O segundo cenário fica no aviso do rodapé.
 
 ### Resultado da verificação
 
