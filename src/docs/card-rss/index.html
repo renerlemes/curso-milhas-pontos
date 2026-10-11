@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Feed · Milhas e Pontos</title>
+</head>
+<body style="margin:0;background:#fff">
+<div id="resultado-rss">
+	<style>
+		#resultado-rss {
+			--ink: #1c1c1c;
+			--muted: #8a8a8a;
+			--line: #e6e6e6;
+			--sage: #629284;
+			max-width: 560px;
+			margin: 0 auto;
+			padding: 28px 28px 36px;
+			background: #fff;
+			color: var(--ink);
+			font-family: "Segoe UI", system-ui, sans-serif;
+			border-radius: 12px;
+		}
+
+		#resultado-rss * {
+			box-sizing: border-box;
+		}
+
+		#resultado-rss .feed {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+		}
+
+		#resultado-rss .feed h2 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: 650;
+			letter-spacing: -0.02em;
+			line-height: 1.2;
+		}
+
+		#resultado-rss .feed p,
+		#resultado-rss .meta,
+		#resultado-rss .summary,
+		#resultado-rss .notes p {
+			margin: 0;
+			color: var(--muted);
+			font-size: 14px;
+			line-height: 1.35;
+		}
+
+		#resultado-rss .feed p {
+			margin-top: 2px;
+		}
+
+		#resultado-rss .count {
+			flex: 0 0 auto;
+			margin: 0;
+			color: var(--sage);
+			font-size: 16px;
+			font-weight: 650;
+			white-space: nowrap;
+		}
+
+		#resultado-rss hr {
+			border: 0;
+			border-top: 1px solid var(--line);
+			margin: 24px 0;
+		}
+
+		#resultado-rss .news + .news {
+			border-top: 1px solid var(--line);
+			margin-top: 24px;
+			padding-top: 24px;
+		}
+
+		#resultado-rss .news a {
+			display: grid;
+			grid-template-columns: 136px minmax(0, 1fr);
+			gap: 16px;
+			align-items: start;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		#resultado-rss .thumb {
+			display: block;
+			width: 100%;
+			aspect-ratio: 4 / 3;
+			object-fit: cover;
+			border-radius: 8px;
+			background: #f2f4f3;
+		}
+
+		#resultado-rss .meta {
+			font-size: 13px;
+		}
+
+		#resultado-rss .meta strong {
+			color: var(--sage);
+			font-weight: 650;
+		}
+
+		#resultado-rss .title {
+			margin: 6px 0 0;
+			font-size: 16px;
+			font-weight: 650;
+			letter-spacing: -0.02em;
+			line-height: 1.25;
+		}
+
+		#resultado-rss .news a:hover .title {
+			color: var(--sage);
+		}
+
+		#resultado-rss .summary {
+			margin-top: 8px;
+			font-size: 14px;
+			line-height: 1.45;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		#resultado-rss .notes p + p {
+			margin-top: 8px;
+		}
+
+		@media (max-width: 560px) {
+			#resultado-rss {
+				padding: 20px 16px 28px;
+			}
+
+			#resultado-rss .news a {
+				grid-template-columns: 104px minmax(0, 1fr);
+				gap: 12px;
+			}
+		}
+	</style>
+
+	<header class="feed">
+		<div>
+			<h2>Milhas &amp; Pontos</h2>
+			<p>Atualizado em 11/10/2026, 11:35</p>
+		</div>
+		<p class="count">3 novas</p>
+	</header>
+
+	<hr>
+
+	<article class="news">
+		<a href="#">
+			<svg class="thumb" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Avião sobre céu ao entardecer">
+				<defs>
+					<linearGradient id="ceu-1" x1="0" y1="0" x2="0" y2="1">
+						<stop offset="0" stop-color="#cfe0da"/>
+						<stop offset="1" stop-color="#f6efe4"/>
+					</linearGradient>
+				</defs>
+				<rect width="640" height="360" fill="url(#ceu-1)"/>
+				<circle cx="480" cy="250" r="70" fill="#f3d9b8"/>
+				<path d="M0 290 Q 160 250 320 285 T 640 270 V360 H0Z" fill="#a9c4ba"/>
+				<path d="M0 320 Q 200 290 380 320 T 640 310 V360 H0Z" fill="#629284"/>
+				<path d="M120 170 Q 320 60 560 120" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 10"/>
+				<g transform="translate(300 112) rotate(-14)" fill="#3a3a3a">
+					<path d="M-60 0 Q -60 -7 -50 -7 H50 Q 64 -7 66 0 Q 64 7 50 7 H-50 Q -60 7 -60 0Z"/>
+					<path d="M-8 -6 L-28 -46 H-16 L22 -6Z"/>
+					<path d="M-8 6 L-28 46 H-16 L22 6Z"/>
+					<path d="M-52 -5 L-62 -24 H-54 L-38 -5Z"/>
+				</g>
+			</svg>
+			<div>
+				<p class="meta"><strong>Passageiro de Primeira</strong> · 11/10/2026 09:30h (há 2 h)</p>
+				<h3 class="title">Smiles abre bônus de até 100% na transferência de pontos do Livelo</h3>
+				<p class="summary">Promoção vale até domingo e o bônus máximo exige assinatura do Clube Smiles.</p>
+			</div>
+		</a>
+	</article>
+
+	<article class="news">
+		<a href="#">
+			<svg class="thumb" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cartão de crédito">
+				<rect width="400" height="300" fill="#e8efec"/>
+				<rect x="70" y="80" width="260" height="160" rx="16" fill="#629284"/>
+				<rect x="70" y="118" width="260" height="26" fill="#3a3a3a" opacity="0.55"/>
+				<rect x="96" y="176" width="44" height="32" rx="5" fill="#f3d9b8"/>
+				<rect x="160" y="190" width="120" height="8" rx="4" fill="#fff" opacity="0.8"/>
+			</svg>
+			<div>
+				<p class="meta"><strong>Melhores Destinos</strong> · 11/10/2026 06:30h (há 5 h)</p>
+				<h3 class="title">Banco muda regra de pontuação e corta pontos em compras internacionais</h3>
+				<p class="summary">Nova tabela começa em novembro e reduz o acúmulo por dólar gasto. Saiba se ainda compensa manter o cartão.</p>
+			</div>
+		</a>
+	</article>
+
+	<article class="news">
+		<a href="#">
+			<svg class="thumb" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mala de viagem">
+				<rect width="400" height="300" fill="#f6efe4"/>
+				<rect x="150" y="70" width="100" height="30" rx="12" fill="none" stroke="#3a3a3a" stroke-width="10"/>
+				<rect x="110" y="96" width="180" height="160" rx="18" fill="#629284"/>
+				<rect x="150" y="96" width="14" height="160" fill="#a9c4ba"/>
+				<rect x="236" y="96" width="14" height="160" fill="#a9c4ba"/>
+			</svg>
+			<div>
+				<p class="meta"><strong>Pontos pra Voar</strong> · 10/10/2026 11:30h (há 1 dia)</p>
+				<h3 class="title">LATAM libera resgates para a Europa a partir de 60 mil pontos</h3>
+				<p class="summary">Datas entre março e junho de 2027 aparecem com tarifa reduzida saindo de São Paulo.</p>
+			</div>
+		</a>
+	</article>
+
+	<hr>
+
+	<div class="notes">
+		<p>Resumo automático do feed; leia a matéria completa antes de transferir pontos.</p>
+		<p>Dados ilustrativos; não representam notícias reais.</p>
+	</div>
+</div></body>
+</html>

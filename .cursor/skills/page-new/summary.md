@@ -57,7 +57,7 @@ Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar di
 | Aula | Título | Objetivo |
 | --- | --- | --- |
 | 1 | Pesquisar Rotas | Mapa de rotas para ver companhias e ligações. Isso não reserva assento com milhas. |
-| 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira. |
+| 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira, e separar a tarifa em dinheiro da tarifa award. |
 | 3 | Pesquisar em Sites Especializados | Achar promoção em site especializado e confirmar no site oficial. |
 | 4 | Pesquisar em Grupos de WhatsApp | Alertas de grupo, confirmados no canal oficial. |
 | 5 | Tabela Fixa e Tabela Dinâmica | Os dois modelos, com o exemplo do LATAM Pass que está na página. A tabela de um programa não vale para outro. |
@@ -71,7 +71,7 @@ O glossário do curso: o que cada palavra quer dizer. Exemplos de passagem e hot
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Glossário | Definir CPM, milheiro, bônus, transferência, emissão, resgate, tabela fixa, tabela dinâmica e Avios. |
+| 1 | Glossário | Definir CPM, milheiro, bônus, transferência, emissão, resgate, tarifa award, tabela fixa, tabela dinâmica e Avios. |
 
 ## Módulo 7 — Cálculos
 

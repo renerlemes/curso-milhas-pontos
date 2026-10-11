@@ -48,7 +48,7 @@
 
     .choices {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
 
@@ -89,6 +89,12 @@
       line-height: 1.45;
     }
 
+    @media (max-width: 900px) {
+      .choices {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 640px) {
       .choices {
         grid-template-columns: 1fr;
@@ -116,6 +122,11 @@
         <div class="kicker">Calcular</div>
         <h2>Calculadoras</h2>
         <p>Contas de custo, transferência e emissão</p>
+      </a>
+      <a class="choice" href="/docs/">
+        <div class="kicker">Consultar</div>
+        <h2>Documentos</h2>
+        <p>Materiais e modelos em páginas</p>
       </a>
     </div>
   </main>
