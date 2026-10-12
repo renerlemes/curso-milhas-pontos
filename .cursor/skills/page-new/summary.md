@@ -19,7 +19,7 @@ Onde os pontos ficam, para onde podem ir e quais regras conferir: transferência
 | --- | --- | --- |
 | 1 | Livelo e Esfera | O que são, usar no programa ou transferir. Cadastro gratuito basta; plano pago é opcional. Sem o clube, os pontos normalmente expiram. |
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada um, planos pagos, e que milhas não passam de um programa para outro sozinhas. Inclui o Viaje Fácil da Smiles. |
-| 3 | Avios | Ponto da Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling e Finnair. O caminho de transferência precisa existir. |
+| 3 | Avios | Ponto compartilhado por British Airways, Iberia, Finnair, Qatar, Vueling e Aer Lingus. Dá para mover entre alguns desses programas, 1 por 1. Cada um cobra a passagem do seu jeito. |
 | 4 | Alianças Globais das Companhias Aéreas | As três alianças, com algumas companhias de cada uma. Estar no grupo não abre todo assento. Azul, GOL e LATAM ficam de fora. |
 | 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. |
 | 6 | Cadastros | Mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
