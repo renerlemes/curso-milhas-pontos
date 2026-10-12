@@ -20,10 +20,11 @@ Onde os pontos ficam, para onde podem ir e quais regras conferir: transferência
 | 1 | Livelo e Esfera | O que são, usar no programa ou transferir. Cadastro gratuito basta; plano pago é opcional. Sem o clube, os pontos normalmente expiram. |
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada um, planos pagos, e que milhas não passam de um programa para outro sozinhas. Inclui o Viaje Fácil da Smiles. |
 | 3 | Avios | Ponto da Iberia, British Airways, Aer Lingus, Qatar Airways, Vueling e Finnair. O caminho de transferência precisa existir. |
-| 4 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. |
-| 5 | Cadastros | Mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
-| 6 | Transferências | Dá para transferir, quanto chega, quando vence e se dá para participar. Transferência em geral não volta. |
-| 7 | Usando os Pontos | Comparar troca por produto e compra que acumula, com os exemplos da página. |
+| 4 | Alianças Globais das Companhias Aéreas | As três alianças, com algumas companhias de cada uma. Estar no grupo não abre todo assento. Azul, GOL e LATAM ficam de fora. |
+| 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. |
+| 6 | Cadastros | Mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
+| 7 | Transferências | Dá para transferir, quanto chega, quando vence e se dá para participar. Transferência em geral não volta. |
+| 8 | Usando os Pontos | Comparar troca por produto e compra que acumula, com os exemplos da página. |
 
 Programas do curso: Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass, Iberia Club, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair, Avios e Accor (ALL). Não afirmar que todos são parceiros diretos.
 
@@ -58,12 +59,12 @@ Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar di
 | --- | --- | --- |
 | 1 | Pesquisar Rotas | Mapa de rotas para ver companhias e ligações. Isso não reserva assento com milhas. |
 | 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira, separar o lugar pago em dinheiro do lugar pago com milhas e ver por que a companhia guarda só alguns assentos. |
-| 3 | Pesquisar em Sites Especializados | Achar promoção em site especializado e confirmar no site oficial. |
+| 3 | Pesquisar em Sites Especializados | Ver para que esses sites servem, o que o Passageiro de Primeira publica e o que o Seats.aero mostra, e confirmar no site oficial. |
 | 4 | Pesquisar em Grupos de WhatsApp | Alertas de grupo, confirmados no canal oficial. |
-| 5 | Tabela Fixa e Tabela Dinâmica | Os dois modelos, com o exemplo do LATAM Pass que está na página. A tabela de um programa não vale para outro. |
+| 5 | Tabela Fixa e Tabela Dinâmica | Separar a busca dinâmica da tabela fixa do LATAM Pass: voos de parceiras, vaga limitada e emissão confirmada pelo atendimento. A tabela de um programa não vale para outro. |
 | 6 | Dinheiro, Milhas e Taxas | Separar CPM da compra, CPM depois do bônus e o custo desta emissão. |
 | 7 | Quatro passagens, quatro valores | Quatro rotas em que o uso muda o valor de cada milheiro. |
-| 8 | Pontos viram hospedagem | A regra da Accor (aula 2.4) aplicada a um hotel, com os números da página. |
+| 8 | Pontos viram hospedagem | A regra da Accor (aula 2.5) aplicada a um hotel, com os números da página. |
 
 ## Módulo 6 — Extras
 

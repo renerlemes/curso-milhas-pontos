@@ -12,4 +12,4 @@ Público iniciante. O curso ensina a decidir se acumular, comprar, transferir e 
 - CPM = (custo total considerado ÷ pontos recebidos) × 1.000. Diga o que entrou no custo e na quantidade.
 - Exemplo hipotético recorrente, quando a aula precisar: 100.000 pontos por R$ 1.500, transferência 1:1 com bônus de 100%, 200.000 milhas, R$ 7,50 por milheiro.
 - O módulo 6 é só o glossário. Exemplos de emissão ficam no módulo 5.
-- Não crie módulo extra para validade, expiração, transferência irreversível, disponibilidade, clube, taxas, custo de oportunidade, compra sem resgate, passagem equivalente, registro de saldo ou checklist de promoção. Esses temas já estão nas aulas 2.5, 2.6, 3.3, 4.2 e 5.6.
+- Não crie módulo extra para validade, expiração, transferência irreversível, disponibilidade, clube, taxas, custo de oportunidade, compra sem resgate, passagem equivalente, registro de saldo ou checklist de promoção. Esses temas já estão nas aulas 2.6, 2.7, 3.3, 4.2 e 5.6.
