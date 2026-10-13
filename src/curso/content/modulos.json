@@ -65,9 +65,10 @@
 		{
 			"numero": 6,
 			"titulo": "Extras",
-			"descricao": "O glossário do curso: o que cada palavra quer dizer.",
+			"descricao": "O glossário do curso e dicas de ritmo para quem está começando.",
 			"aulas": [
-				{ "numero": 1, "titulo": "Glossário" }
+				{ "numero": 1, "titulo": "Glossário" },
+				{ "numero": 2, "titulo": "Dicas" }
 			]
 		},
 		{

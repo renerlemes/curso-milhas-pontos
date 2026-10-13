@@ -68,11 +68,12 @@ Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar di
 
 ## Módulo 6 — Extras
 
-O glossário do curso: o que cada palavra quer dizer. Exemplos de passagem e hotel ficam nas aulas 5.7 e 5.8.
+O glossário do curso e dicas de ritmo para quem está começando. Exemplos de passagem e hotel ficam nas aulas 5.7 e 5.8.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
 | 1 | Glossário | Definir CPM, milheiro, bônus, transferência, emissão, resgate, tarifa award, tabela fixa, tabela dinâmica e Avios. |
+| 2 | Dicas | A estratégia é acumular, transferir e emitir. No começo, entender e acumular; a busca e os grupos de alerta vêm quando a pessoa já lê uma oferta. |
 
 ## Módulo 7 — Cálculos
 
