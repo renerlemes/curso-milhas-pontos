@@ -21,7 +21,7 @@ Onde os pontos ficam, para onde podem ir e quais regras conferir: transferência
 | 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada um, planos pagos, e que milhas não passam de um programa para outro sozinhas. Inclui o Viaje Fácil da Smiles. |
 | 3 | Avios | Ponto compartilhado por British Airways, Iberia, Finnair, Qatar, Vueling e Aer Lingus. Dá para mover entre alguns desses programas, 1 por 1. Cada um cobra a passagem do seu jeito. |
 | 4 | Alianças Globais das Companhias Aéreas | As três alianças, com algumas companhias de cada uma. Estar no grupo não abre todo assento. Azul, GOL e LATAM ficam de fora. |
-| 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. |
+| 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. Da LATAM Pass, a paridade normal é 6.000 milhas para 1.000 Reward. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. O custo de cada euro está na aula 7.5. |
 | 6 | Cadastros | Mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
 | 7 | Transferências | Dá para transferir, quanto chega, quando vence e se dá para participar. Transferência em geral não volta. |
 | 8 | Usando os Pontos | Comparar troca por produto e compra que acumula, com os exemplos da página. |
@@ -77,7 +77,7 @@ O glossário do curso e dicas de ritmo para quem está começando. Exemplos de p
 
 ## Módulo 7 — Cálculos
 
-Calculadoras editáveis para custo por milheiro, transferência com bônus e o valor de uma emissão, comparado com a passagem em dinheiro.
+Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão e ALL Accor.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
@@ -85,3 +85,4 @@ Calculadoras editáveis para custo por milheiro, transferência com bônus e o v
 | 2 | Custo Por Milheiro | CPM a partir dos pontos comprados e do valor pago. |
 | 3 | Custo Por Milheiro - Transferência | Proporção e bônus, pontos recebidos e CPM antes e depois. |
 | 4 | Emissão de Passagem | Estimar a emissão em reais. O milheiro começa na referência do programa e pode ser alterado. Ida e volta são opcionais. |
+| 5 | ALL Accor | Custo de transformar milhas em crédito ALL. Ao escolher a LATAM Pass, entram o milheiro de referência e 6.000 milhas para 1.000 Pontos Reward. A lupa busca a PTAX de venda do euro. Bônus da promoção só entra quando preenchido. |

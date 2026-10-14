@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>ALL Accor — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-lesson="m7-a5" data-root="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../../index.html">
+        <div class="brand-mark">M&amp;P</div>
+        <div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div>
+      </a>
+      <div class="top-note"><span>Do zero à primeira passagem</span><a class="top-exit" href="/">Sair</a></div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas">
+      <div class="course-nav-label"><a href="../../index.html">Aulas</a></div>
+      <nav id="curriculum" aria-label="Módulos do curso"></nav>
+      <footer class="course-progress">
+        <div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div>
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-pct" id="progress-pct">0% concluído</div>
+      </footer>
+    </aside>
+    <main id="conteudo">
+      <article class="lesson">
+        <header class="hero">
+          <div class="eyebrow">Módulo 7 · Cálculos</div>
+          <h1>ALL Accor</h1>
+          <p class="lead">Quanto custa transformar milhas em crédito na ALL. Sem promoção, a conta usa a proporção normal.</p>
+          <div class="meta">
+            <span class="pill">Módulo 7 - Aula 5</span>
+          </div>
+        </header>
+        <div class="body">
+          <section class="section" id="calculadora">
+            <div class="kicker">01 · Calculadora</div>
+            <h2>Edite os valores</h2>
+            <p>Escolha a LATAM Pass para usar o milheiro de referência e a proporção de 6.000 milhas para 1.000 Pontos Reward. O bônus da promoção só entra quando você preenche.</p>
+            <div class="calculator accor" data-calculator="accor">
+              <div class="calculator-fields cols-3">
+                <div class="calculator-field">
+                  <label for="accor-program">Programa de origem</label>
+                  <select class="calculator-input" id="accor-program" name="program">
+                    <option value="">Selecione</option>
+                    <option value="latam" data-reference="26" data-ratio="6000">LATAM Pass</option>
+                  </select>
+                  <p class="field-note is-blank" data-reference-note>Milheiro de referência: <strong data-output="reference">—</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-miles">Milhas utilizadas</label>
+                  <input class="calculator-input" id="accor-miles" name="miles" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-cpm">Valor do milheiro</label>
+                  <input class="calculator-input" id="accor-cpm" name="cpm" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-ratio">Milhas para 1.000 Reward</label>
+                  <input class="calculator-input" id="accor-ratio" name="ratio" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                  <p class="field-note is-blank" data-ratio-note>Referência: <strong data-output="ratio-reference">—</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-promo-bonus">Bônus da promoção (%)</label>
+                  <input class="calculator-input" id="accor-promo-bonus" name="promo-bonus" type="text" inputmode="decimal" data-mask="decimal" value="0" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-euro">Euros por 1.000 Reward</label>
+                  <input class="calculator-input" id="accor-euro" name="euro-block" type="text" inputmode="decimal" data-mask="decimal" value="20" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="accor-fx">Câmbio do euro (R$)</label>
+                  <div class="fx-lookup">
+                    <input class="calculator-input" id="accor-fx" name="fx" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                    <button type="button" class="fx-lookup-button" data-fx-lookup aria-label="Buscar cotação do euro">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16.5 20.5 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                  </div>
+                  <p class="field-note fx-quote is-blank" data-fx-note></p>
+                </div>
+              </div>
+              <div class="calculator-results accor-results" aria-live="polite">
+                <div class="calculator-result"><span>Custo da operação</span><output data-output="cost">—</output></div>
+                <div class="calculator-result"><span>Pontos Awards</span><output data-output="received">—</output></div>
+                <div class="calculator-result"><span>Crédito</span><output data-output="credit">—</output></div>
+                <div class="calculator-result"><span>Valor nominal</span><output data-output="nominal">—</output></div>
+                <div class="calculator-result"><span>Valor diferença R$</span><output data-output="gap">—</output></div>
+                <div class="calculator-result"><span>Diferença em %</span><output data-output="gap-pct">—</output></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="conta">
+            <div class="kicker">02 · A conta</div>
+            <h2>Proporção primeiro, bônus depois</h2>
+            <p>O bônus da promoção incide sobre os pontos da proporção. O crédito segue esses pontos: 1.000 Reward valem os euros do bloco.</p>
+            <div class="formula">
+              <div class="formula-label">Pontos da proporção</div>
+              <div class="equation">milhas ÷ milhas para 1.000 Reward × 1.000</div>
+            </div>
+            <div class="formula">
+              <div class="formula-label">Crédito em euros</div>
+              <div class="equation">pontos recebidos ÷ 1.000 × euros do bloco</div>
+            </div>
+            <p>O custo da operação é milhas ÷ 1.000 × valor do milheiro. A lupa ao lado do câmbio busca a última PTAX de venda do euro no Banco Central. O valor pode ser alterado. O valor nominal em reais usa esse câmbio. A diferença em reais é esse nominal menos o custo. A diferença em % divide essa conta pelo valor nominal.</p>
+            <p>Com 6.000 milhas e a proporção normal, chegam 1.000 Reward, que valem € 20. O custo é o das milhas.</p>
+            <div class="callout">
+              <div class="callout-icon">i</div>
+              <div>
+                <strong>Diferença não é lucro</strong>
+                <p>O crédito só vira desconto numa hospedagem ALL. A transferência, em geral, não volta. Confira proporção, mínimo e múltiplo no site da parceria antes de transferir.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="lesson-actions">
+          <button type="button" class="btn" id="btn-toggle-complete">Marcar como concluída</button>
+        </div>
+        <footer class="footer">
+          <nav class="actions" id="lesson-pager" aria-label="Navegação entre aulas"></nav>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script src="../../script.js"></script>
+  <script src="../../script-calculadoras.js"></script>
+</body>
+</html>

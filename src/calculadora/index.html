@@ -31,7 +31,7 @@
         <header class="hero">
           <div class="eyebrow">Calculadoras</div>
           <h1>Calculadoras</h1>
-          <p class="lead">Contas de custo, transferência e emissão.</p>
+          <p class="lead">Contas de custo, transferência, emissão e ALL Accor.</p>
         </header>
         <div class="body">
           <section class="section" id="custo-por-milheiro">
@@ -248,8 +248,72 @@
             </div>
           </section>
 
+          <section class="section" id="credito-all-accor">
+            <div class="kicker">04 · Calculadora</div>
+            <h2>ALL Accor</h2>
+            <p>Escolha a LATAM Pass para usar o milheiro de referência e a proporção de 6.000 milhas para 1.000 Pontos Reward. O bônus da promoção só entra quando você preenche.</p>
+            <div class="calculator accor" data-calculator="accor">
+              <div class="calculator-fields cols-3">
+                <div class="calculator-field">
+                  <label for="c-accor-program">Programa de origem</label>
+                  <select class="calculator-input" id="c-accor-program" name="program">
+                    <option value="">Selecione</option>
+                    <option value="latam" data-reference="26" data-ratio="6000">LATAM Pass</option>
+                  </select>
+                  <p class="field-note is-blank" data-reference-note>Milheiro de referência: <strong data-output="reference">—</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-miles">Milhas utilizadas</label>
+                  <input class="calculator-input" id="c-accor-miles" name="miles" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-cpm">Valor do milheiro</label>
+                  <input class="calculator-input" id="c-accor-cpm" name="cpm" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-ratio">Milhas para 1.000 Reward</label>
+                  <input class="calculator-input" id="c-accor-ratio" name="ratio" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+                  <p class="field-note is-blank" data-ratio-note>Referência: <strong data-output="ratio-reference">—</strong></p>
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-promo-bonus">Bônus da promoção (%)</label>
+                  <input class="calculator-input" id="c-accor-promo-bonus" name="promo-bonus" type="text" inputmode="decimal" data-mask="decimal" value="0" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-euro">Euros por 1.000 Reward</label>
+                  <input class="calculator-input" id="c-accor-euro" name="euro-block" type="text" inputmode="decimal" data-mask="decimal" value="20" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="c-accor-fx">Câmbio do euro (R$)</label>
+                  <div class="fx-lookup">
+                    <input class="calculator-input" id="c-accor-fx" name="fx" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+                    <button type="button" class="fx-lookup-button" data-fx-lookup aria-label="Buscar cotação do euro">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16.5 20.5 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                  </div>
+                  <p class="field-note fx-quote is-blank" data-fx-note></p>
+                </div>
+              </div>
+              <div class="calculator-results accor-results" aria-live="polite">
+                <div class="calculator-result"><span>Custo da operação</span><output data-output="cost">—</output></div>
+                <div class="calculator-result"><span>Pontos Awards</span><output data-output="received">—</output></div>
+                <div class="calculator-result"><span>Crédito</span><output data-output="credit">—</output></div>
+                <div class="calculator-result"><span>Valor nominal</span><output data-output="nominal">—</output></div>
+                <div class="calculator-result"><span>Valor diferença R$</span><output data-output="gap">—</output></div>
+                <div class="calculator-result"><span>Diferença em %</span><output data-output="gap-pct">—</output></div>
+              </div>
+            </div>
+            <div class="callout">
+              <div class="callout-icon">i</div>
+              <div>
+                <strong>Diferença não é lucro</strong>
+                <p>O crédito só vira desconto numa hospedagem ALL. A transferência, em geral, não volta. Confira proporção, mínimo e múltiplo no site da parceria antes de transferir.</p>
+              </div>
+            </div>
+          </section>
+
           <section class="section" id="valores-de-referencia">
-            <div class="kicker">04 · Referência</div>
+            <div class="kicker">05 · Referência</div>
             <h2>Valores de referência do milheiro</h2>
             <p>Teto de outubro de 2026. É o valor que a calculadora de emissão preenche ao escolher o programa.</p>
             <div class="reference-grid">

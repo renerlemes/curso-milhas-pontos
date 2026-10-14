@@ -4,7 +4,7 @@
     <div>
       <div class="cover-kicker">Módulo 7</div>
       <h1>Cálculos</h1>
-      <p>Calculadoras editáveis para custo por milheiro, transferência com bônus e o valor de uma emissão, comparado com a passagem em dinheiro.</p>
+      <p>Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão e ALL Accor.</p>
     </div>
     <div class="cover-footer">Milhas &amp; Pontos • Do zero à primeira passagem</div>
   </div>
@@ -14,6 +14,7 @@
     <div class="lesson-item"><div class="icon icon-4">2</div>Custo Por Milheiro</div>
     <div class="lesson-item"><div class="icon icon-4">3</div>Custo Por Milheiro - Transferência</div>
     <div class="lesson-item"><div class="icon icon-4">4</div>Emissão de Passagem</div>
+    <div class="lesson-item"><div class="icon icon-4">5</div>ALL Accor</div>
   </div>
 </section>
 
@@ -200,6 +201,63 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide-award">
+  <div>
+    <div class="slide-header">
+      <span class="badge">Módulo 7 • Aula 5</span>
+      <span class="slide-num"></span>
+    </div>
+    <div class="title-section">
+      <h1>ALL Accor</h1>
+      <p>Escolha a LATAM Pass para preencher o milheiro de referência e 6.000 milhas para 1.000 Pontos Reward.</p>
+    </div>
+  </div>
+  <div class="slide-body" style="gap:10px">
+    <div class="calculator accor" data-calculator="accor">
+      <div class="calculator-fields">
+        <div class="calculator-field"><label for="s5-program">Programa de origem</label>
+          <select class="calculator-input" id="s5-program" name="program">
+            <option value="">Selecione</option>
+            <option value="latam" data-reference="26" data-ratio="6000">LATAM Pass</option>
+          </select>
+          <p class="field-note is-blank" data-reference-note>Milheiro de referência: <strong data-output="reference">—</strong></p>
+        </div>
+        <div class="calculator-field"><label for="s5-miles">Milhas utilizadas</label><input class="calculator-input" id="s5-miles" name="miles" type="text" inputmode="numeric" data-mask="integer" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s5-cpm">Valor do milheiro</label><input class="calculator-input" id="s5-cpm" name="cpm" type="text" inputmode="decimal" data-mask="money" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s5-ratio">Milhas para 1.000 Reward</label><input class="calculator-input" id="s5-ratio" name="ratio" type="text" inputmode="numeric" data-mask="integer" autocomplete="off">
+          <p class="field-note is-blank" data-ratio-note>Referência: <strong data-output="ratio-reference">—</strong></p>
+        </div>
+        <div class="calculator-field"><label for="s5-promo-bonus">Bônus da promoção (%)</label><input class="calculator-input" id="s5-promo-bonus" name="promo-bonus" type="text" inputmode="decimal" data-mask="decimal" value="0" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s5-euro">Euros por 1.000 Reward</label><input class="calculator-input" id="s5-euro" name="euro-block" type="text" inputmode="decimal" data-mask="decimal" value="20" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s5-fx">Câmbio do euro (R$)</label>
+          <div class="fx-lookup">
+            <input class="calculator-input" id="s5-fx" name="fx" type="text" inputmode="decimal" data-mask="money" placeholder="Opcional" autocomplete="off">
+            <button type="button" class="fx-lookup-button" data-fx-lookup aria-label="Buscar cotação do euro">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16.5 20.5 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="field-note fx-quote is-blank" data-fx-note></p>
+        </div>
+      </div>
+      <div class="calculator-results accor-results" aria-live="polite">
+        <div class="calculator-result"><span>Custo da operação</span><output data-output="cost">—</output></div>
+        <div class="calculator-result"><span>Pontos Awards</span><output data-output="received">—</output></div>
+        <div class="calculator-result"><span>Crédito</span><output data-output="credit">—</output></div>
+        <div class="calculator-result"><span>Valor nominal</span><output data-output="nominal">—</output></div>
+        <div class="calculator-result"><span>Valor diferença R$</span><output data-output="gap">—</output></div>
+        <div class="calculator-result"><span>Diferença em %</span><output data-output="gap-pct">—</output></div>
+      </div>
+    </div>
+  </div>
+  <div class="alert-box info">
+    <div class="alert-icon">i</div>
+    <div class="alert-content">
+      <h4>Diferença não é lucro</h4>
+      <p>O crédito só vira desconto numa hospedagem ALL. Os bônus incidem sobre os pontos da proporção. Confira a proporção no site da parceria antes de transferir.</p>
     </div>
   </div>
 </section>

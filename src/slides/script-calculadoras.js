@@ -193,6 +193,17 @@
 		}).format(value);
 	}
 
+	function formatEuro(value) {
+		if (!Number.isFinite(value)) return "—";
+		return `€ ${formatNumber(value, 2)}`;
+	}
+
+	function formatPoints(value) {
+		if (!Number.isFinite(value)) return "—";
+		var whole = Math.abs(value - Math.round(value)) < 0.001;
+		return formatNumber(value, whole ? 0 : 2);
+	}
+
 	function setOutput(calculator, name, value) {
 		var output = calculator.querySelector(`[data-output="${name}"]`);
 		if (output) output.textContent = value;
@@ -518,6 +529,221 @@
 		}
 	}
 
+	function filledNumber(calculator, name) {
+		var field = calculator.querySelector(`[name="${name}"]`);
+		var amount;
+		if (!field || !field.value.trim()) return null;
+		amount = readNumber(field);
+		return Number.isFinite(amount) ? amount : null;
+	}
+
+	function fillAccorProgram(calculator) {
+		var programField = calculator.querySelector('[name="program"]');
+		var option =
+			programField && programField.selectedOptions
+				? programField.selectedOptions[0]
+				: null;
+		var programValue = option && option.value ? option.value : "";
+		var officialReference = option ? Number(option.dataset.reference) : NaN;
+		var officialRatio = option ? Number(option.dataset.ratio) : NaN;
+		var cpmField = calculator.querySelector('[name="cpm"]');
+		var ratioField = calculator.querySelector('[name="ratio"]');
+		var referenceNote = calculator.querySelector("[data-reference-note]");
+		var ratioNote = calculator.querySelector("[data-ratio-note]");
+		var cents;
+		var formatted;
+
+		if (cpmField && cpmField.dataset.filledProgram !== programValue) {
+			cpmField.dataset.filledProgram = programValue;
+			if (Number.isFinite(officialReference)) {
+				cents = String(Math.round(officialReference * 100));
+				formatted = formatMoneyInput(cents);
+				cpmField.value = formatted;
+				cpmField.dataset.moneyValue = formatted;
+			} else {
+				cpmField.value = "";
+				cpmField.dataset.moneyValue = "";
+			}
+		}
+		if (ratioField && ratioField.dataset.filledProgram !== programValue) {
+			ratioField.dataset.filledProgram = programValue;
+			ratioField.value =
+				Number.isFinite(officialRatio) && officialRatio > 0
+					? formatIntegerInput(String(Math.round(officialRatio)))
+					: "";
+		}
+		if (referenceNote) {
+			referenceNote.classList.toggle(
+				"is-blank",
+				!Number.isFinite(officialReference),
+			);
+		}
+		if (ratioNote) {
+			ratioNote.classList.toggle("is-blank", !(officialRatio > 0));
+		}
+		setOutput(
+			calculator,
+			"reference",
+			Number.isFinite(officialReference) ? formatMoney(officialReference) : "—",
+		);
+		setOutput(
+			calculator,
+			"ratio-reference",
+			officialRatio > 0 ? formatPoints(officialRatio) : "—",
+		);
+	}
+
+	function calculateAccor(calculator) {
+		var miles;
+		var cpm;
+		var ratio;
+		var promoBonus;
+		var euroBlock;
+		var fx;
+		var mileCost = NaN;
+		var result;
+
+		fillAccorProgram(calculator);
+		miles = filledNumber(calculator, "miles");
+		cpm = filledNumber(calculator, "cpm");
+		ratio = filledNumber(calculator, "ratio");
+		promoBonus = filledNumber(calculator, "promo-bonus");
+		euroBlock = filledNumber(calculator, "euro-block");
+		fx = filledNumber(calculator, "fx");
+
+		if (promoBonus == null) promoBonus = 0;
+		if (!(euroBlock > 0)) euroBlock = euroBlock == null ? 20 : euroBlock;
+		if (cpm != null && cpm >= 0 && miles > 0) mileCost = (miles / 1000) * cpm;
+
+		function scenario(bonusRate) {
+			var rate = 1 + bonusRate / 100;
+			var base =
+				miles > 0 && ratio > 0 ? (miles / ratio) * 1000 : NaN;
+			var received = Number.isFinite(base) ? base * rate : NaN;
+			var credit =
+				Number.isFinite(received) && euroBlock > 0
+					? (received / 1000) * euroBlock
+					: NaN;
+			var cost = mileCost;
+			var nominal =
+				Number.isFinite(credit) && fx != null && fx >= 0 ? credit * fx : NaN;
+			var gap =
+				Number.isFinite(nominal) && Number.isFinite(cost)
+					? nominal - cost
+					: NaN;
+			var gapPct =
+				Number.isFinite(gap) && nominal > 0 ? (gap / nominal) * 100 : NaN;
+
+			return {
+				received: received,
+				credit: credit,
+				cost: cost,
+				nominal: nominal,
+				gap: gap,
+				gapPct: gapPct,
+			};
+		}
+
+		result = scenario(promoBonus);
+		setOutput(calculator, "received", formatPoints(result.received));
+		setOutput(calculator, "credit", formatEuro(result.credit));
+		setOutput(calculator, "cost", formatMoney(result.cost));
+		setOutput(calculator, "nominal", formatMoney(result.nominal));
+		setOutput(calculator, "gap", formatMoney(result.gap));
+		setOutput(
+			calculator,
+			"gap-pct",
+			Number.isFinite(result.gapPct) ? `${formatNumber(result.gapPct, 2)}%` : "—",
+		);
+		setNegative(calculator, "gap", result.gap < 0);
+		setNegative(calculator, "gap-pct", result.gapPct < 0);
+	}
+
+	function euroPtaxUrl(date) {
+		var month = String(date.getMonth() + 1).padStart(2, "0");
+		var day = String(date.getDate()).padStart(2, "0");
+		var stamp = `${month}-${day}-${date.getFullYear()}`;
+		return (
+			"https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/" +
+			"CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)" +
+			`?@moeda='EUR'&@dataCotacao='${stamp}'&$top=100&$format=json` +
+			"&$select=cotacaoVenda,dataHoraCotacao"
+		);
+	}
+
+	function formatPtaxWhen(value) {
+		var parts = String(value).split(/[\s:-]/);
+		if (parts.length < 5) return "";
+		return `${parts[2]}/${parts[1]}/${parts[0]} ${parts[3]}:${parts[4]}h`;
+	}
+
+	function readEuroPtax(offset) {
+		var date;
+		if (offset > 6) return Promise.resolve(null);
+		date = new Date();
+		date.setHours(12, 0, 0, 0);
+		date.setDate(date.getDate() - offset);
+		return fetch(euroPtaxUrl(date))
+			.then((response) => {
+				if (!response.ok) throw new Error("ptax");
+				return response.json();
+			})
+			.then((data) => {
+				var rows = data && data.value ? data.value : [];
+				var latest = null;
+				rows.forEach((row) => {
+					var rate = Number(row.cotacaoVenda);
+					if (!(rate > 0)) return;
+					if (
+						!latest ||
+						String(row.dataHoraCotacao) > String(latest.dataHoraCotacao)
+					) {
+						latest = row;
+					}
+				});
+				if (!latest) return readEuroPtax(offset + 1);
+				return {
+					rate: Number(latest.cotacaoVenda),
+					label: formatPtaxWhen(latest.dataHoraCotacao),
+				};
+			})
+			.catch(() => readEuroPtax(offset + 1));
+	}
+
+	function bindEuroLookup() {
+		document.querySelectorAll("[data-fx-lookup]").forEach((button) => {
+			button.addEventListener("click", () => {
+				var calculator = button.closest("[data-calculator]");
+				var field;
+				var note;
+				var formatted;
+				if (!calculator || button.disabled) return;
+				button.disabled = true;
+				readEuroPtax(0)
+					.then((quote) => {
+						if (!quote) return;
+						field = calculator.querySelector('[name="fx"]');
+						note = calculator.querySelector("[data-fx-note]");
+						if (field) {
+							formatted = formatMoneyInput(
+								String(Math.round(quote.rate * 100)),
+							);
+							field.value = formatted;
+							field.dataset.moneyValue = formatted;
+							field.dispatchEvent(new Event("input", { bubbles: true }));
+						}
+						if (note) {
+							note.textContent = `${quote.label} - ${formatMoney(quote.rate)}`;
+							note.classList.remove("is-blank");
+						}
+					})
+					.finally(() => {
+						button.disabled = false;
+					});
+			});
+		});
+	}
+
 	var calculators = document.querySelectorAll("[data-calculator]");
 	calculators.forEach((calculator) => {
 		var type = calculator.dataset.calculator;
@@ -528,7 +754,9 @@
 					? calculateTransfer
 					: type === "award"
 						? calculateAward
-						: calculateEmission;
+						: type === "accor"
+							? calculateAccor
+							: calculateEmission;
 
 		function onEdit(event) {
 			var field = event.target;
@@ -551,4 +779,5 @@
 		calculator.addEventListener("change", onEdit);
 		calculate(calculator);
 	});
+	bindEuroLookup();
 })();

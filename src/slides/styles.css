@@ -1001,7 +1001,7 @@ body {
 .calculator-field label {
 	display: block;
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 400;
 	color: var(--muted);
 	margin-bottom: 6px;
 }
@@ -1014,7 +1014,7 @@ body {
 	background: #ffffff;
 	font: inherit;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 400;
 	color: var(--ink);
 }
 
@@ -1048,7 +1048,7 @@ select.calculator-input {
 	min-height: 1.35em;
 	color: var(--muted);
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1.35;
 }
 
@@ -1064,11 +1064,52 @@ select.calculator-input {
 	color: var(--ink);
 }
 
+.fx-lookup {
+	position: relative;
+}
+
+.fx-lookup .calculator-input {
+	padding-right: 42px;
+}
+
+.fx-lookup-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 40px;
+	display: grid;
+	place-items: center;
+	border: 0;
+	background: transparent;
+	color: var(--muted);
+	cursor: pointer;
+	padding: 0;
+}
+
+.fx-lookup-button svg {
+	width: 18px;
+	height: 18px;
+}
+
+.fx-lookup-button:hover {
+	color: var(--ink);
+}
+
+.fx-lookup-button:disabled {
+	cursor: wait;
+	opacity: 0.55;
+}
+
+.field-note.fx-quote {
+	font-weight: 400;
+}
+
 .calculator-detail {
 	margin: 6px 0 0;
 	color: var(--muted);
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 .calculator-detail:empty {
@@ -1083,6 +1124,29 @@ select.calculator-input {
 
 .calculator-results.cols-1 {
 	grid-template-columns: 1fr;
+}
+
+.calculator-results.cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.calculator-results.accor-results {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.calculator-results.accor-results > .calculator-result:nth-child(1) {
+	grid-column: span 6;
+}
+
+.calculator-results.accor-results > .calculator-result:nth-child(2),
+.calculator-results.accor-results > .calculator-result:nth-child(3),
+.calculator-results.accor-results > .calculator-result:nth-child(4) {
+	grid-column: span 2;
+}
+
+.calculator-results.accor-results > .calculator-result:nth-child(5),
+.calculator-results.accor-results > .calculator-result:nth-child(6) {
+	grid-column: span 3;
 }
 
 .calculator-results.cols-3 {
@@ -1174,7 +1238,7 @@ select.calculator-input {
 .calculator-result span {
 	display: block;
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 400;
 	color: var(--green);
 	margin-bottom: 4px;
 }
@@ -1186,8 +1250,59 @@ select.calculator-input {
 
 .calculator-result output {
 	font-size: 28px;
-	font-weight: 800;
+	font-weight: 400;
 	color: var(--ink);
+}
+
+.calculator-result.is-best {
+	box-shadow: inset 0 0 0 2px var(--green);
+}
+
+.calculator-result output.is-negative {
+	color: var(--red);
+}
+
+.calculator.accor .calculator-input {
+	padding: 8px 10px;
+	font-size: 16px;
+}
+
+.calculator.accor .calculator-fields {
+	gap: 10px;
+}
+
+.accor-lines {
+	list-style: none;
+	margin: 8px 0 0;
+	padding: 0;
+}
+
+.accor-lines li {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	margin-top: 4px;
+	color: var(--ink);
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.accor-lines li span {
+	display: inline;
+	margin: 0;
+	color: var(--muted);
+	font-size: inherit;
+	font-weight: 400;
+}
+
+.calculator-result .accor-lines output {
+	color: var(--ink);
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.calculator-result .accor-lines output.is-negative {
+	color: var(--red);
 }
 
 .calculator-result.negative {
@@ -1306,7 +1421,7 @@ select.calculator-input {
 	padding: 24px;
 }
 
-/* M7A4: formulário e resultado cabem no slide */
+/* M7A4 e M7A5: formulário e resultado cabem no slide */
 .slide-award {
 	padding: 28px 40px 24px;
 	gap: 10px;
@@ -1343,7 +1458,6 @@ select.calculator-input {
 .slide-award .calculator-input {
 	padding: 7px 10px;
 	font-size: 16px;
-	font-weight: 400;
 }
 
 .slide-award .award-board {
