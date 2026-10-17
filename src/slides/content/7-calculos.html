@@ -4,7 +4,7 @@
     <div>
       <div class="cover-kicker">Módulo 7</div>
       <h1>Cálculos</h1>
-      <p>Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão e ALL Accor.</p>
+      <p>Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão, ALL Accor e cartão de crédito.</p>
     </div>
     <div class="cover-footer">Milhas &amp; Pontos • Do zero à primeira passagem</div>
   </div>
@@ -15,6 +15,7 @@
     <div class="lesson-item"><div class="icon icon-4">3</div>Custo Por Milheiro - Transferência</div>
     <div class="lesson-item"><div class="icon icon-4">4</div>Emissão de Passagem</div>
     <div class="lesson-item"><div class="icon icon-4">5</div>ALL Accor</div>
+    <div class="lesson-item"><div class="icon icon-4">6</div>Cartão de Crédito</div>
   </div>
 </section>
 
@@ -258,6 +259,45 @@
     <div class="alert-content">
       <h4>Diferença não é lucro</h4>
       <p>O crédito só vira desconto numa hospedagem ALL. Os bônus incidem sobre os pontos da proporção. Confira a proporção no site da parceria antes de transferir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div>
+    <div class="slide-header">
+      <span class="badge">Módulo 7 • Aula 6</span>
+      <span class="slide-num"></span>
+    </div>
+    <div class="title-section">
+      <h1>Cartão de Crédito</h1>
+      <p>Pontos é quantos pontos o cartão dá por cada dólar gasto. O resultado de pontos é arredondado.</p>
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="calculator" data-calculator="credit-card">
+      <div class="calculator-fields">
+        <div class="calculator-field"><label for="s6-purchase">Valor da compra (R$)</label><input class="calculator-input" id="s6-purchase" name="purchase" type="text" inputmode="decimal" data-mask="money" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s6-cashback">Cashback (%)</label><input class="calculator-input" id="s6-cashback" name="cashback" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s6-points">Pontos</label><input class="calculator-input" id="s6-points" name="points" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off"></div>
+        <div class="calculator-field"><label for="s6-dollar">Dólar (R$)</label><input class="calculator-input" id="s6-dollar" name="dollar" type="text" inputmode="decimal" data-mask="money" autocomplete="off"></div>
+      </div>
+      <div class="calculator-results cols-3" aria-live="polite">
+        <div class="calculator-result"><span>Cashback</span><output data-output="cashback">—</output></div>
+        <div class="calculator-result"><span>Pontos</span><output data-output="points">—</output></div>
+        <div class="calculator-result"><span>Cashback x Milheiro</span><output data-output="cashback-per-thousand">—</output></div>
+      </div>
+    </div>
+    <div class="formula-box">
+      <div class="formula-label">Fórmula</div>
+      <div class="equation">cashback x milheiro = cashback × dólar × 10 ÷ pontos por dólar</div>
+    </div>
+  </div>
+  <div class="alert-box info">
+    <div class="alert-icon">i</div>
+    <div class="alert-content">
+      <h4>Não baixa o preço da compra</h4>
+      <p>Cashback e pontos entram depois. Juros do cartão ficam de fora desta conta.</p>
     </div>
   </div>
 </section>

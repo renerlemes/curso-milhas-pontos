@@ -31,7 +31,7 @@
         <header class="hero">
           <div class="eyebrow">Calculadoras</div>
           <h1>Calculadoras</h1>
-          <p class="lead">Contas de custo, transferência, emissão e ALL Accor.</p>
+          <p class="lead">Contas de custo, transferência, emissão, ALL Accor e cartão de crédito.</p>
         </header>
         <div class="body">
           <section class="section" id="custo-por-milheiro">
@@ -312,8 +312,39 @@
             </div>
           </section>
 
+          <section class="section" id="cartao-de-credito">
+            <div class="kicker">05 · Calculadora</div>
+            <h2>Cartão de Crédito</h2>
+            <p>Pontos é quantos pontos o cartão dá por cada dólar gasto. O dólar é a cotação usada nessa conta. O resultado de pontos é arredondado.</p>
+            <div class="calculator" data-calculator="credit-card">
+              <div class="calculator-fields cols-4">
+                <div class="calculator-field">
+                  <label for="card-purchase">Valor da compra (R$)</label>
+                  <input class="calculator-input" id="card-purchase" name="purchase" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="card-cashback">Cashback (%)</label>
+                  <input class="calculator-input" id="card-cashback" name="cashback" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="card-points">Pontos</label>
+                  <input class="calculator-input" id="card-points" name="points" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="card-dollar">Dólar (R$)</label>
+                  <input class="calculator-input" id="card-dollar" name="dollar" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+              </div>
+              <div class="calculator-results" aria-live="polite">
+                <div class="calculator-result"><span>Cashback</span><output data-output="cashback">—</output></div>
+                <div class="calculator-result"><span>Pontos</span><output data-output="points">—</output></div>
+                <div class="calculator-result"><span>Cashback x Milheiro</span><output data-output="cashback-per-thousand">—</output></div>
+              </div>
+            </div>
+          </section>
+
           <section class="section" id="valores-de-referencia">
-            <div class="kicker">05 · Referência</div>
+            <div class="kicker">06 · Referência</div>
             <h2>Valores de referência do milheiro</h2>
             <p>Teto de outubro de 2026. É o valor que a calculadora de emissão preenche ao escolher o programa.</p>
             <div class="reference-grid">

@@ -788,6 +788,9 @@ tr.total td {
 .calculator-fields.cols-3 {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.calculator-fields.cols-4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .calculator-field label {
 	display: block;
 	margin-bottom: 6px;
@@ -1189,7 +1192,9 @@ details[open] summary {
 	}
 	.calculator-fields,
 	.calculator-fields.cols-3,
+	.calculator-fields.cols-4,
 	.calculator-results,
+	.calculator-results.cols-2,
 	.calculator-results.award-results {
 		grid-template-columns: 1fr;
 	}

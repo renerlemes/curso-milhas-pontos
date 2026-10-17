@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Cartão de Crédito — Milhas &amp; Pontos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body data-lesson="m7-a6" data-root="../../">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../../index.html">
+        <div class="brand-mark">M&amp;P</div>
+        <div>Milhas &amp; Pontos<small>Guia prático de viagens</small></div>
+      </a>
+      <div class="top-note"><span>Do zero à primeira passagem</span><a class="top-exit" href="/">Sair</a></div>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="course-nav" aria-label="Módulos e aulas">
+      <div class="course-nav-label"><a href="../../index.html">Aulas</a></div>
+      <nav id="curriculum" aria-label="Módulos do curso"></nav>
+      <footer class="course-progress">
+        <div class="progress-label"><span>Progresso</span><span id="progress-count">0 / 0</span></div>
+        <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-pct" id="progress-pct">0% concluído</div>
+      </footer>
+    </aside>
+    <main id="conteudo">
+      <article class="lesson">
+        <header class="hero">
+          <div class="eyebrow">Módulo 7 · Cálculos</div>
+          <h1>Cartão de Crédito</h1>
+          <p class="lead">Quanto a compra devolve em cashback e em pontos.</p>
+          <div class="meta">
+            <span class="pill">Módulo 7 - Aula 6</span>
+          </div>
+        </header>
+        <div class="body">
+          <section class="section" id="calculadora">
+            <div class="kicker">01 · Calculadora</div>
+            <h2>Edite os valores</h2>
+            <p>Pontos é quantos pontos o cartão dá por cada dólar gasto. O dólar é a cotação usada nessa conta.</p>
+            <div class="calculator" data-calculator="credit-card">
+              <div class="calculator-fields cols-4">
+                <div class="calculator-field">
+                  <label for="cc-purchase">Valor da compra (R$)</label>
+                  <input class="calculator-input" id="cc-purchase" name="purchase" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cc-cashback">Cashback (%)</label>
+                  <input class="calculator-input" id="cc-cashback" name="cashback" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cc-points">Pontos</label>
+                  <input class="calculator-input" id="cc-points" name="points" type="text" inputmode="decimal" data-mask="decimal" autocomplete="off">
+                </div>
+                <div class="calculator-field">
+                  <label for="cc-dollar">Dólar (R$)</label>
+                  <input class="calculator-input" id="cc-dollar" name="dollar" type="text" inputmode="decimal" data-mask="money" autocomplete="off">
+                </div>
+              </div>
+              <div class="calculator-results" aria-live="polite">
+                <div class="calculator-result"><span>Cashback</span><output data-output="cashback">—</output></div>
+                <div class="calculator-result"><span>Pontos</span><output data-output="points">—</output></div>
+                <div class="calculator-result"><span>Cashback x Milheiro</span><output data-output="cashback-per-thousand">—</output></div>
+              </div>
+            </div>
+          </section>
+          <section class="section" id="conta">
+            <div class="kicker">02 · Fórmula</div>
+            <h2>Cashback à parte, pontos pelo dólar</h2>
+            <div class="formula">
+              <div class="formula-label">Cashback</div>
+              <div class="equation">valor da compra × cashback ÷ 100</div>
+            </div>
+            <div class="formula">
+              <div class="formula-label">Pontos</div>
+              <div class="equation">valor da compra ÷ dólar × pontos por dólar</div>
+            </div>
+            <div class="formula">
+              <div class="formula-label">Cashback x Milheiro</div>
+              <div class="equation">cashback × dólar × 10 ÷ pontos por dólar</div>
+            </div>
+            <p>Exemplo hipotético. Compra de R$ 4.000, cashback de 1,25% e 2,2 pontos por dólar, com o dólar a R$ 5,34. O cashback é 4.000 × 1,25 ÷ 100 = R$ 50. Os pontos são 4.000 ÷ 5,34 × 2,2 = 1.648, já arredondados.</p>
+            <p>Cashback x Milheiro é o cashback que você deixa de receber a cada 1.000 pontos. O valor da compra não entra: 1,25 × 5,34 × 10 ÷ 2,2 = R$ 30,34 por 1.000 pontos. Compare com o milheiro de referência do programa para onde os pontos vão.</p>
+            <div class="callout">
+              <div class="callout-icon">i</div>
+              <div>
+                <strong>Não baixa o preço da compra</strong>
+                <p>Cashback e pontos entram depois. Juros do cartão ficam de fora desta conta.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="lesson-actions">
+          <button type="button" class="btn" id="btn-toggle-complete">Marcar como concluída</button>
+        </div>
+        <footer class="footer">
+          <nav class="actions" id="lesson-pager" aria-label="Navegação entre aulas"></nav>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script src="../../script.js"></script>
+  <script src="../../script-calculadoras.js"></script>
+</body>
+</html>

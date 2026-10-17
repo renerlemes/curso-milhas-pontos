@@ -221,6 +221,35 @@
 		return readNumber(calculator.querySelector(`[name="${name}"]`));
 	}
 
+	function calculateCreditCard(calculator) {
+		var purchase = value(calculator, "purchase");
+		var cashbackRate = value(calculator, "cashback");
+		var pointsRate = value(calculator, "points");
+		var dollar = value(calculator, "dollar");
+		var cashback =
+			purchase >= 0 && cashbackRate >= 0
+				? (purchase * cashbackRate) / 100
+				: NaN;
+		var points =
+			purchase >= 0 && pointsRate >= 0 && dollar > 0
+				? Math.round((purchase / dollar) * pointsRate)
+				: NaN;
+		var cashbackPerThousand =
+			cashbackRate >= 0 && pointsRate > 0 && dollar > 0
+				? (cashbackRate * dollar * 10) / pointsRate
+				: NaN;
+
+		setOutput(calculator, "cashback", formatMoney(cashback));
+		setOutput(calculator, "points", formatNumber(points, 0));
+		setOutput(
+			calculator,
+			"cashback-per-thousand",
+			Number.isFinite(cashbackPerThousand)
+				? `${formatMoney(cashbackPerThousand)} por 1.000 pontos`
+				: "—",
+		);
+	}
+
 	function calculatePurchase(calculator) {
 		var points = value(calculator, "points");
 		var paid = value(calculator, "paid");
@@ -754,9 +783,11 @@
 					? calculateTransfer
 					: type === "award"
 						? calculateAward
-						: type === "accor"
-							? calculateAccor
-							: calculateEmission;
+						: 			type === "accor"
+				? calculateAccor
+				: type === "credit-card"
+					? calculateCreditCard
+					: calculateEmission;
 
 		function onEdit(event) {
 			var field = event.target;

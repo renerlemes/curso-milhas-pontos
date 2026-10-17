@@ -77,7 +77,7 @@ O glossário do curso e dicas de ritmo para quem está começando. Exemplos de p
 
 ## Módulo 7 — Cálculos
 
-Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão e ALL Accor.
+Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão, ALL Accor e cartão de crédito.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
@@ -86,3 +86,4 @@ Calculadoras editáveis para custo por milheiro, transferência com bônus, o va
 | 3 | Custo Por Milheiro - Transferência | Proporção e bônus, pontos recebidos e CPM antes e depois. |
 | 4 | Emissão de Passagem | Estimar a emissão em reais. O milheiro começa na referência do programa e pode ser alterado. Ida e volta são opcionais. |
 | 5 | ALL Accor | Custo de transformar milhas em crédito ALL. Ao escolher a LATAM Pass, entram o milheiro de referência e 6.000 milhas para 1.000 Pontos Reward. A lupa busca a PTAX de venda do euro. Bônus da promoção só entra quando preenchido. |
+| 6 | Cartão de Crédito | Cashback da compra e pontos por dólar gasto. O exemplo hipotético de R$ 4.000, 1,25% e 2,2 pontos por dólar a R$ 5,34 dá R$ 50 e 1.648 pontos. Cashback x Milheiro não usa o valor da compra: R$ 30,34 por 1.000 pontos. |

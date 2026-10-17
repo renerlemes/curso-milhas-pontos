@@ -74,13 +74,14 @@
 		{
 			"numero": 7,
 			"titulo": "Cálculos",
-			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão e ALL Accor.",
+			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão, ALL Accor e cartão de crédito.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Valores de Referência do Milheiro" },
 				{ "numero": 2, "titulo": "Custo Por Milheiro" },
 				{ "numero": 3, "titulo": "Custo Por Milheiro - Transferência" },
 				{ "numero": 4, "titulo": "Emissão de Passagem" },
-				{ "numero": 5, "titulo": "ALL Accor" }
+				{ "numero": 5, "titulo": "ALL Accor" },
+				{ "numero": 6, "titulo": "Cartão de Crédito" }
 			]
 		}
 	]
