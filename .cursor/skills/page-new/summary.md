@@ -59,7 +59,7 @@ Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar di
 | --- | --- | --- |
 | 1 | Pesquisar Rotas | Mapa de rotas para ver companhias e ligações. Isso não reserva assento com milhas. |
 | 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira, separar o lugar pago em dinheiro do lugar pago com milhas e ver por que a companhia guarda só alguns assentos. |
-| 3 | Pesquisar em Sites Especializados | Ver para que esses sites servem, o que o Passageiro de Primeira publica e o que o Seats.aero mostra, e confirmar no site oficial. |
+| 3 | Pesquisar em Sites Especializados | Ver para que esses sites servem, o que o Passageiro de Primeira publica e como usar Explorar e Buscar no Seats.aero, e confirmar a vaga no programa antes de transferir. Referência: dois vídeos do Pedro Gerador. |
 | 4 | Pesquisar em Grupos de WhatsApp | Alertas de grupo, confirmados no canal oficial. |
 | 5 | Tabela Fixa e Tabela Dinâmica | Separar a busca dinâmica da tabela fixa do LATAM Pass: voos de parceiras, vaga limitada e emissão confirmada pelo atendimento. A tabela de um programa não vale para outro. |
 | 6 | Dinheiro, Milhas e Taxas | Separar CPM da compra, CPM depois do bônus e o custo desta emissão. |
