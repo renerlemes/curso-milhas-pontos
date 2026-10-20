@@ -34,7 +34,7 @@ Formas de acumular, gasto orgânico versus artificial e como calcular e interpre
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Formas de Acumular | De onde os pontos vêm e a diferença entre gasto que já existia e gasto feito só para ganhar pontos. |
+| 1 | Formas de Acumular | De onde os pontos vêm, caminhos de acúmulo nos principais programas e a diferença entre gasto que já existia e gasto feito só para ganhar pontos. |
 | 2 | Como Calcular o CPM | Aplicar a fórmula e comparar só contas iguais, sem bônus que ainda não chegou. |
 | 3 | Comprar sem Estratégia de Uso | Risco de comprar pontos sem viagem ou resgate em vista, inclusive o custo de oportunidade. |
 | 4 | Valores de Referência do Milheiro | Verde, amarelo e vermelho, com as faixas dos programas. A mesma tabela, com data e fontes, está na aula 7.1. |
