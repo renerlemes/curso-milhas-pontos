@@ -1022,6 +1022,21 @@ select.calculator-input {
 	width: auto;
 	margin: 4px 0 0;
 }
+.savings-line {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+}
+.calculator-result .savings-line .savings-pct {
+	font-size: 1.05rem;
+}
+.calculator-result.choice .savings-line .result-choice {
+	height: 1.35rem;
+	margin: 0;
+	flex: 0 0 auto;
+}
 .result-logo[hidden],
 .result-medal[hidden],
 .result-choice[hidden],

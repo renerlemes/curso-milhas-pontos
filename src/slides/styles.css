@@ -1221,6 +1221,24 @@ select.calculator-input {
 	margin: 4px 0 0;
 }
 
+.savings-line {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+}
+
+.calculator-result .savings-line .savings-pct {
+	font-size: 20px;
+}
+
+.calculator-result.choice .savings-line .result-choice {
+	height: 28px;
+	margin: 0;
+	flex: 0 0 auto;
+}
+
 .result-logo[hidden],
 .result-medal[hidden],
 .result-choice[hidden],
@@ -1504,12 +1522,20 @@ select.calculator-input {
 	margin: 0;
 }
 
+.slide-award .calculator-result .savings-line .savings-pct {
+	font-size: 14px;
+}
+
+.slide-award .calculator-result.choice .savings-line .result-choice {
+	height: 18px;
+}
+
 .slide-award .result-logo {
 	height: 22px;
 }
 
 .slide-award .award-compare .calculator-results.award-results {
-	grid-template-columns: repeat(6, minmax(0, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .slide-award .award-compare .calculator-results.award-results > .calculator-result {

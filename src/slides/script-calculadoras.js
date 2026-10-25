@@ -333,11 +333,22 @@
 			(taxes != null ? taxes : 0);
 	}
 
+	function showSavings(calculator, key, amount, percent) {
+		var pct = calculator.querySelector(`[data-output="savings-pct-${key}"]`);
+		var ready = Number.isFinite(amount) && Number.isFinite(percent);
+		setOutput(calculator, `savings-${key}`, formatMoney(amount));
+		if (pct) {
+			pct.textContent = ready ? `(${formatNumber(percent, 2)}%)` : "";
+			pct.hidden = !ready;
+		}
+		setNegative(calculator, `savings-${key}`, amount < 0);
+	}
+
 	function pointsText(points) {
 		return points != null ? `${formatNumber(points, 0)} pontos` : "";
 	}
 
-	function showChoice(calculator, key, savings) {
+	function showChoice(calculator, key, savings, points) {
 		var image = calculator.querySelector(`[data-choice-image="${key}"]`);
 		var label = calculator.querySelector(`[data-summary="choice-${key}"]`);
 		var empty = calculator.querySelector(`[data-output="choice-${key}-empty"]`);
@@ -366,12 +377,12 @@
 		if (label) {
 			label.textContent =
 				kind === "pontos"
-					? "Pontos"
+					? points != null
+						? `usando ${pointsText(points)}`
+						: "usando pontos"
 					: kind === "dinheiro"
-						? "Dinheiro"
-						: kind === "igual"
-							? "Igual"
-							: "";
+						? "usando dinheiro"
+						: "";
 		}
 		if (empty) empty.hidden = kind !== "";
 	}
@@ -484,26 +495,23 @@
 			inboundCash != null ? formatMoney(inboundCash) : "—",
 		);
 		setOutput(calculator, "cash", formatMoney(cashTotal));
-		setOutput(calculator, "savings-out", formatMoney(outboundSavings));
-		setOutput(calculator, "savings-back", formatMoney(inboundSavings));
-		setOutput(
-			calculator,
-			"savings-pct-out",
-			Number.isFinite(outboundSavingsPct)
-				? `${formatNumber(outboundSavingsPct, 2)}%`
-				: "—",
-		);
-		setOutput(
-			calculator,
-			"savings-pct-back",
-			Number.isFinite(inboundSavingsPct)
-				? `${formatNumber(inboundSavingsPct, 2)}%`
-				: "—",
-		);
-		setNegative(calculator, "savings-out", outboundSavings < 0);
-		setNegative(calculator, "savings-pct-out", outboundSavingsPct < 0);
-		setNegative(calculator, "savings-back", inboundSavings < 0);
-		setNegative(calculator, "savings-pct-back", inboundSavingsPct < 0);
+		var totalSavings =
+			outboundReady || inboundReady
+				? (outboundReady ? outboundSavings : 0) +
+					(inboundReady ? inboundSavings : 0)
+				: NaN;
+		var comparedCash =
+			(outboundReady ? outboundCash : 0) + (inboundReady ? inboundCash : 0);
+		var totalSavingsPct =
+			Number.isFinite(totalSavings) && comparedCash > 0
+				? (totalSavings / comparedCash) * 100
+				: NaN;
+		var pointsUsed =
+			(outboundSavings > 0.004 && outbound != null ? outbound : 0) +
+			(inboundSavings > 0.004 && inbound != null ? inbound : 0);
+		showSavings(calculator, "out", outboundSavings, outboundSavingsPct);
+		showSavings(calculator, "back", inboundSavings, inboundSavingsPct);
+		showSavings(calculator, "total", totalSavings, totalSavingsPct);
 		if (outboundSavingsNote) {
 			outboundSavingsNote.textContent =
 				outboundCash != null && !outboundReady ? pendingNote : "";
@@ -512,8 +520,14 @@
 			inboundSavingsNote.textContent =
 				inboundCash != null && !inboundReady ? pendingNote : "";
 		}
-		showChoice(calculator, "out", outboundSavings);
-		showChoice(calculator, "back", inboundSavings);
+		showChoice(calculator, "out", outboundSavings, outbound);
+		showChoice(calculator, "back", inboundSavings, inbound);
+		showChoice(
+			calculator,
+			"total",
+			totalSavings,
+			pointsUsed > 0 ? pointsUsed : null,
+		);
 
 		var logo = calculator.querySelector("[data-program-logo]");
 		var logoFallback = calculator.querySelector('[data-output="program-empty"]');
