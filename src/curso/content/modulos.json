@@ -20,37 +20,35 @@
 				{ "numero": 4, "titulo": "Alianças Globais das Companhias Aéreas" },
 				{ "numero": 5, "titulo": "Accor" },
 				{ "numero": 6, "titulo": "Cadastros" },
-				{ "numero": 7, "titulo": "Transferências" },
-				{ "numero": 8, "titulo": "Usando os Pontos" }
+				{ "numero": 7, "titulo": "Usando os Pontos" }
 			]
 		},
 		{
 			"numero": 3,
 			"titulo": "Como Acumular e Comprar Pontos Baratos",
-			"descricao": "Formas de acumular, gasto orgânico versus artificial e como calcular e interpretar o CPM.",
+			"descricao": "Formas de acumular e o gasto do dia a dia comparado com o gasto feito só pelos pontos.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Formas de Acumular" },
-				{ "numero": 2, "titulo": "Como Calcular o CPM" },
-				{ "numero": 3, "titulo": "Comprar sem Estratégia de Uso" },
-				{ "numero": 4, "titulo": "Valores de Referência do Milheiro" }
+				{ "numero": 2, "titulo": "Comprar sem Estratégia de Uso" }
 			]
 		},
 		{
 			"numero": 4,
 			"titulo": "Como Transferir com Bônus",
-			"descricao": "Regras de bônus de transferência, pontos finais e custo efetivo por milheiro depois do bônus.",
+			"descricao": "Quatro perguntas antes de transferir, regras de bônus, pontos finais e o custo efetivo por milheiro.",
 			"aulas": [
-				{ "numero": 1, "titulo": "O que é um Bônus de Transferência" },
-				{ "numero": 2, "titulo": "Regras, Limites e Elegibilidade" },
-				{ "numero": 3, "titulo": "Pontos Finais e CPM Efetivo" },
-				{ "numero": 4, "titulo": "Por que Bônus Alto Não Basta" },
-				{ "numero": 5, "titulo": "Exemplo Ilustrativo de Bônus" }
+				{ "numero": 1, "titulo": "Transferências" },
+				{ "numero": 2, "titulo": "O que é um Bônus de Transferência" },
+				{ "numero": 3, "titulo": "Regras, Limites e Elegibilidade" },
+				{ "numero": 4, "titulo": "Pontos Finais e CPM Efetivo" },
+				{ "numero": 5, "titulo": "Por que Bônus Alto Não Basta" },
+				{ "numero": 6, "titulo": "Exemplo Ilustrativo de Bônus" }
 			]
 		},
 		{
 			"numero": 5,
 			"titulo": "Como Encontrar e Avaliar Emissões",
-			"descricao": "Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar dinheiro com milhas e taxas e ver a mesma conta num hotel.",
+			"descricao": "Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica e comparar dinheiro com milhas e taxas.",
 			"aulas": [
 				{ "numero": 1, "titulo": "Pesquisar Rotas" },
 				{ "numero": 2, "titulo": "Pesquisar no Programa" },
@@ -76,12 +74,13 @@
 			"titulo": "Cálculos",
 			"descricao": "Calculadoras editáveis para custo por milheiro, transferência com bônus, o valor de uma emissão, ALL Accor e cartão de crédito.",
 			"aulas": [
-				{ "numero": 1, "titulo": "Valores de Referência do Milheiro" },
-				{ "numero": 2, "titulo": "Custo Por Milheiro" },
-				{ "numero": 3, "titulo": "Custo Por Milheiro - Transferência" },
-				{ "numero": 4, "titulo": "Emissão de Passagem" },
-				{ "numero": 5, "titulo": "ALL Accor" },
-				{ "numero": 6, "titulo": "Cartão de Crédito" }
+				{ "numero": 1, "titulo": "Como Calcular o CPM" },
+				{ "numero": 2, "titulo": "Valores de Referência do Milheiro" },
+				{ "numero": 3, "titulo": "Custo Por Milheiro" },
+				{ "numero": 4, "titulo": "Custo Por Milheiro - Transferência" },
+				{ "numero": 5, "titulo": "Emissão de Passagem" },
+				{ "numero": 6, "titulo": "ALL Accor" },
+				{ "numero": 7, "titulo": "Cartão de Crédito" }
 			]
 		}
 	]

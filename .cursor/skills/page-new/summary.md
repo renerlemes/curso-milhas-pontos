@@ -17,53 +17,51 @@ Onde os pontos ficam, para onde podem ir e quais regras conferir: transferência
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Livelo e Esfera | O que são, usar no programa ou transferir. Cadastro gratuito basta; plano pago é opcional. Sem o clube, os pontos normalmente expiram. |
-| 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada um, planos pagos, e que milhas não passam de um programa para outro sozinhas. Na emissão, separa tarifa award e tarifa pública: parceiras reais na Azul, selo Viaje Fácil na Smiles e milheiro alto na compra de milhas da LATAM Pass. Inclui o Viaje Fácil da Smiles. |
-| 3 | Avios | Ponto compartilhado por British Airways, Iberia, Finnair, Qatar, Vueling e Aer Lingus. Dá para mover entre alguns desses programas, 1 por 1. Cada um cobra a passagem do seu jeito. |
-| 4 | Alianças Globais das Companhias Aéreas | As três alianças, com algumas companhias de cada uma. Estar no grupo não abre todo assento. Azul, GOL e LATAM ficam de fora. |
-| 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. Da LATAM Pass, a paridade normal é 6.000 milhas para 1.000 Reward. A conta precisa existir antes de transferir. O exemplo numérico está na aula 5.8. O custo de cada euro está na aula 7.5. |
+| 1 | Livelo e Esfera | O que são, usar no programa ou transferir. Cadastro gratuito basta; plano pago é opcional e pode incluir pontos mensais, não expiração e desconto na compra de pontos. Os pontos ficam no programa até o uso ou a transferência; olhe a expiração. |
+| 2 | Azul Fidelidade, Smiles e LATAM Pass | De qual companhia é cada um, planos pagos, e que milhas não passam de um programa para outro sozinhas. Inclui o Viaje Fácil da Smiles. |
+| 3 | Avios | Também é um jeito de usar pontos e milhas. Ponto compartilhado por British Airways, Iberia, Finnair, Qatar, Vueling e Aer Lingus. Dá para mover entre alguns desses programas, 1 por 1. Cada um cobra a passagem do seu jeito. |
+| 4 | Alianças Globais das Companhias Aéreas | As três alianças, com algumas companhias de cada uma. Companhia pode estar numa aliança global ou ter parceria individual. Azul, GOL e LATAM trabalham principalmente com acordos próprios. |
+| 5 | Accor | 1.000 Pontos Reward valem € 20 de desconto na rede ALL. Cadastro e conta ativa antes de transferir. Da LATAM Pass, a paridade normal é 6.000 milhas para 1.000 Reward. O exemplo numérico está na aula 5.8. O custo de cada euro está na aula 7.6. |
 | 6 | Cadastros | Mesmo CPF, e-mail e dados; quais cadastros deixar prontos; onde achar regulamento, parceiros e tabela no site oficial. |
-| 7 | Transferências | Dá para transferir, quanto chega, quando vence e se dá para participar. Transferência em geral não volta. |
-| 8 | Usando os Pontos | Comparar troca por produto e compra que acumula, com os exemplos da página. |
+| 7 | Usando os Pontos | Comparar troca por produto e compra que acumula, com os exemplos da página. |
 
 Programas do curso: Livelo, Esfera, Azul Fidelidade, Smiles, LATAM Pass, Iberia Club, British Airways, Aer Lingus, Qatar Airways, Vueling, Finnair, Avios e Accor (ALL). Não afirmar que todos são parceiros diretos.
 
 ## Módulo 3 — Como Acumular e Comprar Pontos Baratos
 
-Formas de acumular, gasto orgânico versus artificial e como calcular e interpretar o CPM.
+Formas de acumular e o gasto do dia a dia comparado com o gasto feito só pelos pontos.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
 | 1 | Formas de Acumular | De onde os pontos vêm, caminhos de acúmulo nos principais programas e a diferença entre gasto que já existia e gasto feito só para ganhar pontos. |
-| 2 | Como Calcular o CPM | Aplicar a fórmula e comparar só contas iguais, sem bônus que ainda não chegou. |
-| 3 | Comprar sem Estratégia de Uso | Risco de comprar pontos sem viagem ou resgate em vista, inclusive o custo de oportunidade. |
-| 4 | Valores de Referência do Milheiro | Verde, amarelo e vermelho, com as faixas dos programas. A mesma tabela, com data e fontes, está na aula 7.1. |
+| 2 | Comprar sem Estratégia de Uso | Risco de comprar pontos sem viagem ou resgate em vista, inclusive o custo de oportunidade. |
 
 ## Módulo 4 — Como Transferir com Bônus
 
-Regras de bônus de transferência, pontos finais e custo efetivo por milheiro depois do bônus.
+Quatro perguntas antes de transferir, regras de bônus, pontos finais e o custo efetivo por milheiro.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | O que é um Bônus de Transferência | Bônus, proporção e por que o saldo de origem não é o saldo que chega. |
-| 2 | Regras, Limites e Elegibilidade | Cadastro prévio, clube, teto, prazo e condições que podem excluir a pessoa. |
-| 3 | Pontos Finais e CPM Efetivo | Quantidade depois do bônus e o custo por milheiro dessa quantidade. |
-| 4 | Por que Bônus Alto Não Basta | Promoção de transferência não é o mesmo que uma emissão que compensa. |
-| 5 | Exemplo Ilustrativo de Bônus | Exemplo hipotético com a conta visível. |
+| 1 | Transferências | Dá para transferir, quanto chega, quando vence e se dá para participar. Transferência em geral não volta. |
+| 2 | O que é um Bônus de Transferência | Bônus, proporção e por que o saldo de origem não é o saldo que chega. |
+| 3 | Regras, Limites e Elegibilidade | Cadastro prévio, clube, teto, prazo e condições que podem excluir a pessoa. |
+| 4 | Pontos Finais e CPM Efetivo | Quantidade depois do bônus e o custo por milheiro dessa quantidade. |
+| 5 | Por que Bônus Alto Não Basta | Promoção de transferência não é o mesmo que uma emissão que compensa. |
+| 6 | Exemplo Ilustrativo de Bônus | Exemplo hipotético com a conta visível. |
 
 ## Módulo 5 — Como Encontrar e Avaliar Emissões
 
-Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica, comparar dinheiro com milhas e taxas e ver a mesma conta num hotel.
+Pesquisar rotas e disponibilidade, entender tabela fixa e dinâmica e comparar dinheiro com milhas e taxas.
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Pesquisar Rotas | Mapa de rotas para ver companhias e ligações. Isso não reserva assento com milhas. |
-| 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira, separar o lugar pago em dinheiro do lugar pago com milhas e ver por que a companhia guarda só alguns assentos. |
+| 1 | Pesquisar Rotas | Mapa de rotas para ver companhias e ligações. |
+| 2 | Pesquisar no Programa | Buscar no programa que emite, com datas, aeroportos, conexão e parceira. A companhia vende milhas para bancos, lojas e parceiros e guarda alguns assentos; a vaga depende da ocupação do voo. |
 | 3 | Pesquisar em Sites Especializados | Ver para que esses sites servem, o que o Passageiro de Primeira publica e como usar Explorar e Buscar no Seats.aero, e confirmar a vaga no programa antes de transferir. Referência: dois vídeos do Pedro Gerador. |
 | 4 | Pesquisar em Grupos de WhatsApp | Alertas de grupo, confirmados no canal oficial. |
 | 5 | Tabela Fixa e Tabela Dinâmica | Separar a busca dinâmica da tabela fixa do LATAM Pass: voos de parceiras, vaga limitada e emissão confirmada pelo atendimento. A tabela de um programa não vale para outro. |
 | 6 | Dinheiro, Milhas e Taxas | Separar CPM da compra, CPM depois do bônus e o custo desta emissão. |
-| 7 | Quatro passagens, quatro valores | Quatro rotas em que o uso muda o valor de cada milheiro. |
+| 7 | Quatro passagens, quatro valores | Quatro rotas. Em cada uma, o total pago pelos pontos fica ao lado do que cada 1.000 cobre da passagem. |
 | 8 | Pontos viram hospedagem | A regra da Accor (aula 2.5) aplicada a um hotel, com os números da página. |
 
 ## Módulo 6 — Extras
@@ -81,9 +79,10 @@ Calculadoras editáveis para custo por milheiro, transferência com bônus, o va
 
 | Aula | Título | Objetivo |
 | --- | --- | --- |
-| 1 | Valores de Referência do Milheiro | Tabela com data e fontes. O critério de leitura está na aula 3.4. A mesma tabela está nas calculadoras. |
-| 2 | Custo Por Milheiro | CPM a partir dos pontos comprados e do valor pago. |
-| 3 | Custo Por Milheiro - Transferência | Proporção e bônus, pontos recebidos e CPM antes e depois. |
-| 4 | Emissão de Passagem | Estimar a emissão em reais. O milheiro começa na referência do programa e pode ser alterado. Ida e volta são opcionais. |
-| 5 | ALL Accor | Custo de transformar milhas em crédito ALL. Ao escolher a LATAM Pass, entram o milheiro de referência e 6.000 milhas para 1.000 Pontos Reward. A lupa busca a PTAX de venda do euro. Bônus da promoção só entra quando preenchido. |
-| 6 | Cartão de Crédito | Cashback da compra e pontos por dólar gasto. O exemplo hipotético de R$ 4.000, 1,25% e 2,2 pontos por dólar a R$ 5,34 dá R$ 50 e 1.648 pontos. Cashback x Milheiro não usa o valor da compra: R$ 30,34 por 1.000 pontos. |
+| 1 | Como Calcular o CPM | Aplicar a fórmula e comparar só contas iguais, sem bônus que ainda não chegou. Milheiro barato não significa passagem barata. |
+| 2 | Valores de Referência do Milheiro | Tabela com data e fontes. A mesma tabela está nas calculadoras. |
+| 3 | Custo Por Milheiro | CPM a partir dos pontos comprados e do valor pago. |
+| 4 | Custo Por Milheiro - Transferência | Proporção e bônus, pontos recebidos e CPM antes e depois. |
+| 5 | Emissão de Passagem | Estimar a emissão em reais. O milheiro começa na referência do programa e pode ser alterado. Ida e volta são opcionais. |
+| 6 | ALL Accor | Custo de transformar milhas em crédito ALL. Ao escolher a LATAM Pass, entram o milheiro de referência e 6.000 milhas para 1.000 Pontos Reward. A lupa busca a PTAX de venda do euro. Bônus da promoção só entra quando preenchido. |
+| 7 | Cartão de Crédito | Cashback da compra e pontos por dólar gasto. O exemplo hipotético de R$ 4.000, 1,25% e 2,2 pontos por dólar a R$ 5,34 dá R$ 50 e 1.648 pontos. Cashback x Milheiro não usa o valor da compra: R$ 30,34 por 1.000 pontos. |

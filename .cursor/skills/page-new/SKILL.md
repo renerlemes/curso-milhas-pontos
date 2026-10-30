@@ -25,7 +25,7 @@ A mesma mudança entra no curso e no slide do módulo. Os slides `0-abertura.htm
 
 Calculadora (formulário, conta, rótulo ou texto) ou valor de referência do milheiro também entra em `src/calculadora/index.html`.
 
-A referência do milheiro está na aula 3.4, na aula 7.1, nos slides dos módulos 3 e 7, na tabela de `src/calculadora/index.html` e no `data-reference` da emissão (aula 7.4, slide do módulo 7 e a página de calculadoras).
+A referência do milheiro está na aula 7.2, no slide do módulo 7, na tabela de `src/calculadora/index.html` e no `data-reference` da emissão (aula 7.5, slide do módulo 7 e a página de calculadoras).
 
 A conta está em `src/curso/script-calculadoras.js`. O slide usa a cópia `src/slides/script-calculadoras.js`. A página de calculadoras usa o script do curso. Se a conta mudar, atualize os dois scripts.
 
