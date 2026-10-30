@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schema.railpack.com",
+	"provider": "node",
+	"packages": {
+		"node": "22",
+		"yarn": "1"
+	},
+	"deploy": {
+		"startCommand": "yarn start"
+	}
+}
